@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.emergency-bar {
+  background-color: #006400;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; 
+  background: rgba(17, 24, 39, 0.95); 
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+/* HEXAGON SHAPE */
+.clip-hex {
+  clip-path: polygon(
+    25% 6%, 75% 6%, 
+    100% 50%, 
+    75% 94%, 25% 94%, 
+    0% 50%
+  );
+}
+@keyframes infiniteScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* testimonial */
+.scroll-column {
+  animation-play-state: paused;
+}
+
+
+.scroll-column.running {
+  animation-play-state: running;
+}
+
+.scroll-fast {
+  animation: infiniteScroll 24s linear infinite;
+}
+
+.scroll-medium {
+  animation: infiniteScroll 34s linear infinite;
+}
+
+.scroll-slow {
+  animation: infiniteScroll 44s linear infinite;
+}
