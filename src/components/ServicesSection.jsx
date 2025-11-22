@@ -21,11 +21,14 @@ const ServicesSection = () => {
         <div className="rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 relative">
 
           {/* CALL ICON TOP CENTER */}
-          <div className="absolute inset-0 flex justify-center top-4 sm:top-6 md:top-10 lg:top-16">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full border-4 sm:border-6 md:border-8 border-green-50 bg-green-50 flex items-center justify-center">
-              <BsFillTelephoneFill className="text-green-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl" />
+          <a href="tel:+916262666631">
+            <div className="absolute inset-0 flex justify-center top-4 sm:top-6 md:top-10 lg:top-16">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full border-4 sm:border-6 md:border-8 border-green-50 bg-green-50 flex items-center justify-center cursor-pointer">
+                <BsFillTelephoneFill className="text-green-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl" />
+              </div>
             </div>
-          </div>
+          </a>
+
 
           {/* BORDER AROUND ALL 5 HEXES */}
           <div className="flex flex-col items-center pt-8 sm:pt-10 md:pt-12 lg:pt-16">
@@ -41,8 +44,8 @@ const ServicesSection = () => {
                   ),
                   icon: <FaUserNurse className="text-xl sm:text-2xl md:text-3xl" />
                 },
-                { 
-                  title: "After-Discharge Home Delivery", 
+                {
+                  title: "After-Discharge Home Delivery",
                   icon: <CiDeliveryTruck className="text-xl sm:text-2xl md:text-3xl" />
                 },
               ].map((s, i) => (
@@ -61,12 +64,12 @@ const ServicesSection = () => {
             {/* ROW 3 - RIGHT 2 */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-20 lg:gap-40 -mt-8 sm:-mt-12 md:-mt-14 lg:-mt-16">
               {[
-                { 
-                  title: "Out-of-State Treatment Help", 
+                {
+                  title: "Out-of-State Treatment Help",
                   icon: <LuTestTube className="text-xl sm:text-2xl md:text-3xl" />
                 },
-                { 
-                  title: "TPA & Billing Support", 
+                {
+                  title: "TPA & Billing Support",
                   icon: <BsClipboard2Data className="text-xl sm:text-2xl md:text-3xl" />
                 },
               ].map((s, i) => (

@@ -204,7 +204,7 @@ const Membership = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             <div>
               <Users className="w-16 h-16 mx-auto mb-4 opacity-90" />
-              <p className="text-5xl font-extrabold">64.6K+</p>
+              <p className="text-5xl font-extrabold">65.0K+</p>
               <p className="mt-2 text-lg">Happy Families</p>
             </div>
             <div>
@@ -230,7 +230,7 @@ const Membership = () => {
       <section id="join" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
-            Join 64,600++ Smart Families Today
+            Join 65,000++ Smart Families Today
           </h2>
           <p className="text-2xl text-gray-700 mb-10">
             Our expert will call you in <span className="text-green-600 font-bold">under 5 minutes</span>

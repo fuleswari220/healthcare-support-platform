@@ -9,6 +9,8 @@ import Testimonials from '../components/Testimonials';
 import HowItWorks from '../components/HowItWorks';
 import Footer from '../components/Footer';
 import PeaceOfMindSection from '../components/PeaceOfMindSection';
+import AboutSection from '../components/AboutSection';
+import MembershipSection from '../components/MembershipSection';
 
 const Home = () => {
   return (
@@ -22,7 +24,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <WhyMLSupport />
+      <AboutSection />
       <ServicesSection />
+      <MembershipSection />
       <MembershipBenefits />
       <HowItWorks />
       <Testimonials />

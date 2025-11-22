@@ -14,7 +14,7 @@ const Footer = () => {
         <title>ML Support | 24×7 Ambulance & Complete Healthcare in Kolkata</title>
         <meta
           name="description"
-          content="Free ambulance up to 180 km, diabetic tests, 0% medical credit, and 300+ hospital tie-ups. Trusted by 18,600+ families across India."
+          content="Free ambulance up to 180 km, diabetic tests, 0% medical credit, and 300+ hospital tie-ups. Trusted by 65,000+ families across India."
         />
       </Helmet>
 
@@ -29,7 +29,7 @@ const Footer = () => {
 
             <p className="text-emerald-100 mb-4">
               Free ambulance up to 180 km, diabetic tests, 0% medical credit, and 300+ hospital tie-ups.
-              Trusted by 18,600+ families across India.
+              Trusted by 65,000+ families across India.
             </p>
 
             <div className="bg-emerald-800/50 rounded-lg p-4 border border-emerald-600">
@@ -65,8 +65,7 @@ const Footer = () => {
                 <FaMapMarkerAlt className="text-sm" />
               </div>
               <p className="text-emerald-100 text-sm">
-                West Bengal – PS Abacus Building, NH12, Action Area IIE, New Town, 700157
-              </p>
+                West Bengal- Mani Casadona International Financial Hub. West Tower, 3WS5D , Kolkata, 700160              </p>
             </div>
 
             {/* Address 2 */}
@@ -170,7 +169,7 @@ const Footer = () => {
               Available <span className="font-semibold text-white">24/7 — 365 days</span>
             </p>
             <p className="mt-2 text-sm text-emerald-100">
-              Trusted by 18,600+ families across India for complete healthcare solutions.
+              Trusted by 65,000+ families across India for complete healthcare solutions.
             </p>
           </div>
         </div>

@@ -150,7 +150,7 @@ export default function Blog() {
     <>
       <Helmet>
         <title>Blog - ML Support | Healthcare Tips & Patient Stories</title>
-        <meta name="description" content="Real patient stories, health tips and updates from ML Support – trusted by over 64,600 families." />
+        <meta name="description" content="Real patient stories, health tips and updates from ML Support – trusted by over 65,000 families." />
       </Helmet>
 
       <Navbar />

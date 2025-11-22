@@ -68,11 +68,11 @@ export default function FAQ() {
         },
         {
             q: "Is there any lock-in period?",
-            a: "No lock-in. You can continue or cancel anytime — though most of our 64,600+ families stay with us for years because of the lifelong peace of mind."
+            a: "No lock-in. You can continue or cancel anytime — though most of our 65,000+ families stay with us for years because of the lifelong peace of mind."
         },
         {
             q: "How many families trust ML Support?",
-            a: "Over 64,600+ families and 300+ hospitals across India have trusted us since 2020."
+            a: "Over 65,000+ families and 300+ hospitals across India have trusted us since 2020."
         },
         {
             q: "I still have questions — how can I reach you?",
@@ -96,7 +96,7 @@ export default function FAQ() {
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md">
                         <Shield className="w-5 h-5" />
-                        Trusted by 64,600+ Families Across India
+                        Trusted by 65,000+ Families Across India
                     </div>
 
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -145,7 +145,7 @@ export default function FAQ() {
                     <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div className="bg-emerald-50 rounded-2xl p-6">
                             <Users className="w-12 h-12 text-emerald-600 mx-auto mb-3" />
-                            <p className="text-3xl font-bold text-gray-900">64.6K+</p>
+                            <p className="text-3xl font-bold text-gray-900">65.0K+</p>
                             <p className="text-gray-600 mt-1">Happy Families</p>
                         </div>
                         <div className="bg-emerald-50 rounded-2xl p-6">
@@ -171,7 +171,7 @@ export default function FAQ() {
                             Ready for Worry-Free Healthcare?
                         </h2>
                         <p className="text-xl mb-8 opacity-90">
-                            Join 64,600+ families who never have to fear medical emergencies again.
+                            Join 65,000+ families who never have to fear medical emergencies again.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a
