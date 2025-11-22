@@ -34,17 +34,18 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="w-28 h-16 object-contain" />
 
         {/* CENTER CONTACT BUTTON (MOBILE) */}
-        <Link
-          to="/contact"
+        <a
+          href="https://mlsupport.org/ML_support/Customer/login.php"
           className="
-            md:hidden bg-[#22c55e] text-black
-            font-semibold px-4 py-2 rounded-xl
-            text-sm
-            hover:bg-[#16a34a] transition
-          "
+    md:hidden bg-[#22c55e] text-black
+    font-semibold px-4 py-2 rounded-xl
+    text-sm
+    hover:bg-[#16a34a] transition
+  "
         >
-          Contact
-        </Link>
+          Login
+        </a>
+
 
         {/* CENTER MENU (DESKTOP ONLY) */}
         <ul className="hidden md:flex items-center gap-10 text-white text-bold text-lg font-medium">
