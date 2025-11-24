@@ -7,8 +7,8 @@ import appointment from "../assets/doctorappointment.webp";
 const WhyMLSupport = () => {
   const benefits = [
     {
-      title: "Free Ambulance Service in Kolkata",
-      desc: "Our 24×7 fully equipped team ensures safe, reliable ambulance support for any routine or emergency need in Kolkata.",
+      title: "Free Ambulance Service",
+      desc: "Our 24×7 fully equipped team ensures safe, reliable ambulance support for any routine or emergency need.",
       icon: <FaAmbulance className="text-[#00bf63] text-2xl" />
     },
     {
@@ -36,10 +36,10 @@ const WhyMLSupport = () => {
         {/* Heading */}
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-            Healthcare Without Limits - For Every Home in Kolkata
+            Healthcare Without Limits - For Every Home
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-green-700 font-semibold max-w-4xl mx-auto">
-            ML Support makes healthcare easy, affordable, and always available—bringing full medical assistance to your Kolkata home without extra costs or delays.
+            ML Support makes healthcare easy, affordable, and always available—bringing full medical assistance to your  home without extra costs or delays.
           </p>
         </div>
 

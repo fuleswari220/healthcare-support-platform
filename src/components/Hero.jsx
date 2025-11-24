@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Your 24×7 <span className="text-green-500">Healthcare</span> Partner
-              <br />
+              <br /> 
               <span className="block sm:inline"> - Wherever Life Takes You</span>
             </h1>
 

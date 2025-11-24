@@ -16,7 +16,7 @@ export default function FAQ() {
     const faqs = [
         {
             q: "What is ML Support?",
-            a: "ML Support is India's first all-in-one healthcare membership founded in 2020. With one affordable membership, you get free ambulance service up to 180 km, weekly diabetic & health check-ups at home, 0% interest medical credit, medicine delivery, cashless treatment at 300+ hospitals, and 24×7 medical coordination across India."
+            a: "ML Support is India's first all-in-one healthcare membership founded in 2020. With one affordable membership, you get free ambulance service up to 180 km, weekly diabetic & health check-ups at home, 0% interest medical credit, medicine delivery, hassle free treatment at 300+ hospitals, and 24×7 medical coordination across India."
         },
         {
             q: "Is the ambulance really free? Are there any limits?",
@@ -24,23 +24,23 @@ export default function FAQ() {
         },
         {
             q: "What does my membership include?",
-            a: "Your ML Support membership gives you: <strong>Unlimited free ambulance transfers (180 km)</strong>, <strong>weekly diabetic screenings at home</strong>, <strong>free online doctor consultation</strong>, <strong>medicine home delivery</strong>, <strong>300+ partner hospitals for cashless treatment</strong>, <strong>post-discharge care</strong>, <strong>TPA billing support</strong>, and <strong>24×7 emergency helpline</strong> — everything in one plan!"
+            a: "Your ML Support membership gives you: <strong>Unlimited free ambulance transfers (180 km)</strong>, <strong>weekly diabetic screenings at home</strong>, <strong>free online doctor consultation</strong>, <strong>medicine home delivery</strong>, <strong>300+ partner hospitals for hassle free treatment</strong>, <strong>post-discharge care</strong>, <strong>TPA billing support</strong>, and <strong>24×7 emergency helpline</strong> — everything in one plan!"
         },
         {
             q: "What health check-ups are included every week?",
             a: "Every member gets free weekly diabetic screening (blood sugar test) at home by certified technicians. Full-body check-ups, CBC, lipid profile, etc., are available at heavily discounted rates or included in premium plans."
         },
         {
-            q: "How do I access my plan?",
-            a: "Super simple! <strong>1) Call 24×7 helpline (+91-626-266-6631)</strong> for instant ambulance or help. <strong>2) Use member app/login</strong> at ml-support.org to book tests, track services. <strong>3) Show membership card</strong> at partner hospitals for cashless treatment. We're always one call away!"
-        },
+    q: "How do I access my plan?",
+    a: "Super simple! <strong>1) Call 24×7 helpline (+91-626-266-6631)</strong> for instant ambulance or help. <strong>2) Use member login</strong> at <a href='https://mlsupport.org/' target='_blank' class='text-green-500 underline'>ml-support.org</a> or <a href='https://mlsupport.org/ML_support/Customer/login.php' target='_blank' class='text-green-500 underline'>Login</a> to book tests, track services. <strong>3) Show membership card</strong> at partner hospitals for hassle free treatment. We're always one call away!" 
+},
         // {
         //     q: "How does the 0% interest medical credit work?",
         //     a: "If hospital bills exceed your insurance or savings, we instantly provide 0% interest credit so you can get treatment without delay. We settle directly with the hospital — you repay comfortably over time with no interest or stress."
         // },
         // {
-        //     q: "Do you offer cashless treatment?",
-        //     a: "Yes! Members enjoy cashless admission and treatment at our network of 300+ partner hospitals across India. We also coordinate with your insurance for maximum coverage."
+        //     q: "Do you offer hassle free treatment?",
+        //     a: "Yes! Members enjoy hassle free admission and treatment at our network of 300+ partner hospitals across India. We also coordinate with your insurance for maximum coverage."
         // },
         {
             q: "Can I use ML Support outside Kolkata?",

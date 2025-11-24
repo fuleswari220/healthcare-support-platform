@@ -1,6 +1,8 @@
 // src/App.jsx
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import HomeSkeleton from "./components/HomeSkeleton";
 
 // Lazy load all pages
 const Home = lazy(() => import("./pages/Home"));
@@ -14,7 +16,7 @@ const Membership = lazy(() => import("./pages/Membership"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Blog = lazy(() => import("./pages/Blog"));
 
-// Optional: Loading Spinner Component (সুন্দর লোডিং দেখাবে)
+// Optional: Loading Spinner Component 
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-emerald-50">
     <div className="text-center">
@@ -27,7 +29,8 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <Router>
-      <Suspense fallback={<LoadingSpinner />}>
+      <ScrollToTop />
+      <Suspense fallback={<HomeSkeleton />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

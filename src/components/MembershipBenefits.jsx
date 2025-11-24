@@ -14,7 +14,7 @@ const MembershipFullSection = () => {
             You're a member of India's most dependable health family
           </p>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Members unlock lifetime advantages designed for your complete healthcare journey
+            Members unlock advantages designed for your complete healthcare journey
           </p>
         </div>
 
@@ -27,7 +27,9 @@ const MembershipFullSection = () => {
               <FaAmbulance className="inline" />
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-3">Unlimited Free Ambulance</h3>
-            <p className="text-gray-600 flex-grow">Emergency ambulance transfers across Kolkata within 180 km radius</p>
+            <p className="text-gray-600 flex-grow">
+              Emergency ambulance transfers across India within 180 km radius
+            </p>
             <div className="mt-4 bg-green-50 rounded-lg p-3">
               <p className="text-sm text-green-700 font-semibold flex items-center">
                 <FaCheck className="mr-2" /> Completely Free
@@ -45,10 +47,13 @@ const MembershipFullSection = () => {
             <p className="text-gray-600 flex-grow">Regular diabetic and comprehensive full-body health screening packages</p>
             <div className="mt-4 bg-green-50 rounded-lg p-3">
               <p className="text-sm text-green-700 font-semibold flex items-center">
-                <FaMapMarkerAlt className="mr-2" /> Available in Kolkata
+                <FaMapMarkerAlt className="mr-2" /> Available all over India
               </p>
-              <p className="text-xs text-green-600 ml-5">Weekly monitoring for better health</p>
+              <p className="text-xs text-green-600 ml-5">
+                Weekly monitoring for better health
+              </p>
             </div>
+
           </div>
 
           {/* Online Doctor & Medicine Delivery */}
@@ -70,8 +75,8 @@ const MembershipFullSection = () => {
                 <FaCheck className="mr-2" /> Medicine Home Delivery
               </p>
               <p className="text-xs text-green-600 ml-5">
-                Fast, reliable medicine delivery to your door.             
-                 </p>
+                Fast, reliable medicine delivery to your door.
+              </p>
             </div>
           </div>
 
@@ -112,16 +117,13 @@ const MembershipFullSection = () => {
               <FaCrown className="inline" />
             </div>
             <h3 className="text-xl font-bold mb-3">Premium Membership</h3>
-            <p className="mb-6 flex-grow">Join India's most trusted healthcare family with lifetime benefits</p>
+            <p className="mb-6 flex-grow">Join India's most trusted healthcare family </p>
             <div className="space-y-3">
               <p className="flex items-center text-sm">
                 <FaCheck className="text-2xl mr-3" /> All benefits included
               </p>
               <p className="flex items-center text-sm">
                 <FaCheck className="text-2xl mr-3" /> No renewal fees
-              </p>
-              <p className="flex items-center text-sm">
-                <FaCheck className="text-2xl mr-3" /> Lifetime access
               </p>
             </div>
           </div>
@@ -136,7 +138,7 @@ const MembershipFullSection = () => {
             <button
               onClick={() => window.open("https://mlsupport.org/ML_support/Customer/login.php", "_blank")}
               className="bg-green-600 hover:bg-green-700 text-white px-12 py-5 rounded-xl font-bold text-xl shadow-xl transition-all hover:shadow-2xl hover:scale-105">
-              Activate Lifetime Membership
+              Activate  Membership
             </button>
             <button
               onClick={() => window.location.href = "/contact"}

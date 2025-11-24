@@ -10,7 +10,7 @@ const MembershipSection = () => {
         <div className="text-center mb-12">
           <p className="text-gray-600 font-medium">
             Trusted by <span className="text-green-600 font-bold">65,000+</span>{" "}
-            Families in Kolkata & Across India
+            Families in Across India
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             One Membership. Complete Family Healthcare.

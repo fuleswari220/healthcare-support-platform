@@ -77,11 +77,11 @@ const Membership = () => {
                 <ul className="space-y-4 mb-8">
                   {[
                     "Free ambulance up to 180 km",
-                    "$9/km reimbursement if unavailable",
+                    "₹9/km reimbursement if unavailable",
                     "Free doctor visit within 72 hrs post-discharge",
                     "Up to 10% off hospital bills, tests & medicines",
                     "Free medicine delivery",
-                    "Weekly diabetic checkup @ $100/month",
+                    "Weekly diabetic checkup @ ₹100/month",
                     "24×7 helpline + telemedicine support"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -136,8 +136,8 @@ const Membership = () => {
                     { icon: FileText, text: "10% discount on total hospital bill" },
                     { icon: Users, text: "24×7 at-home nursing support" },
                     { icon: Heart, text: "Free follow-up doctor visits (7 days)" },
-                    { icon: Droplets, text: "Diabetic tests 2x/month @ $100 only" },
-                    { icon: Utensils, text: "Free personalized diet charts" },
+                    { icon: Droplets, text: "Diabetic tests 2x/month @ ₹100 only" },
+                    { icon: Stethoscope, text: "Free BP & Sugar Monitoring" },
                     { icon: Shield, text: "Full mediclaim & insurance support" }
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
@@ -226,14 +226,14 @@ const Membership = () => {
         </div>
       </section>
 
-      {/* Final CTA Form */}
+      {/* Final CTA Form + Call Button */}
       <section id="join" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
             Join 65,000++ Smart Families Today
           </h2>
           <p className="text-2xl text-gray-700 mb-10">
-            Our expert will call you in <span className="text-green-600 font-bold">under 5 minutes</span>
+            Our expert will call you in <span className="text-green-600 font-bold">under 30 seconds</span>
           </p>
 
           <form className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-200 max-w-2xl mx-auto">
@@ -255,9 +255,10 @@ const Membership = () => {
             <select className="w-full px-6 py-5 rounded-2xl border-2 border-gray-300 focus:border-green-500 focus:ring-4 focus:ring-green-100 transition text-lg mb-6">
               <option>Select Plan</option>
               <option>Basic Membership (FREE)</option>
-              <option selected>Gold Membership $599/year ← Best Value</option>
+              <option selected>Gold Membership ₹599/year ← Best Value</option>
             </select>
 
+            {/* Join Now Button */}
             <a
               href="https://mlsupport.org/ML_support/Customer/login.php"
               target="_blank"
@@ -267,6 +268,17 @@ const Membership = () => {
               Yes! Join Now
             </a>
 
+            {/* নতুন Call Helpline Button - ১০০% ডিজাইন ম্যাচ */}
+            <a
+              href="tel:+916262666631"
+              className="mt-6 w-full inline-flex items-center justify-center gap-3 bg-white border-4 border-green-500 text-green-700 font-bold text-xl py-6 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-green-50 transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <Phone className="w-8 h-8" />
+              <div className="text-center">
+                <div className="text-lg">Call 24×7 Helpline Now</div>
+                <div className="text-sm font-normal opacity-80">+91 626-266-6631</div>
+              </div>
+            </a>
 
             <p className="mt-6 text-gray-600 flex items-center justify-center gap-2">
               <Shield className="w-6 h-6 text-green-600" />

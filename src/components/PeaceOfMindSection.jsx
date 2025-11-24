@@ -1,7 +1,6 @@
 import React from "react";
-import { Shield } from "lucide-react";
+import { Shield, Phone } from "lucide-react";  // Phone আইকন যোগ করলাম
 import { FiArrowRight } from "react-icons/fi";
-
 
 const PeaceOfMindSection = () => {
     return (
@@ -12,7 +11,6 @@ const PeaceOfMindSection = () => {
 
                         {/* 3 Steps */}
                         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6">
-
                             {/* Step 1 */}
                             <div className="flex flex-col items-center">
                                 <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-lg font-bold text-emerald-600 border-2 border-emerald-600">
@@ -57,7 +55,6 @@ const PeaceOfMindSection = () => {
                                     </p>
                                 </div>
                             </div>
-
                         </div>
 
                         {/* Heading */}
@@ -66,20 +63,35 @@ const PeaceOfMindSection = () => {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-xs text-gray-700 max-w-sm mx-auto mb-4 leading-snug">
+                        <p className="text-xs text-gray-700 max-w-sm mx-auto mb-6 leading-snug">
                             Whether it’s an emergency or a routine visit, our 24×7 team coordinates ambulance, admission, appointments, and more — so you can focus on getting better.
                         </p>
 
-                        {/* Button */}
-                        <button
-                            onClick={() => window.open("https://mlsupport.org/ML_support/Customer/login.php", "_blank")}
-                            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs px-5 py-2.5 rounded-full shadow transition hover:scale-105"
-                        >
-                            <span>Join Now</span>
-                            <FiArrowRight className="w-4 h-4" />
-                        </button>
+                        {/* Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                            {/* Join Now Button */}
+                            <button
+                                onClick={() => window.open("https://mlsupport.org/ML_support/Customer/login.php", "_blank")}
+                                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs px-5 py-2.5 rounded-full shadow transition hover:scale-105"
+                            >
+                                <span>Join Now</span>
+                                <FiArrowRight className="w-4 h-4" />
+                            </button>
 
+                            {/* Call Now Button */}
+                            <a
+                                href="tel:+916262666631"
+                                className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-emerald-700 border-2 border-emerald-600 font-medium text-xs px-5 py-2.5 rounded-full shadow transition hover:scale-105"
+                            >
+                                <Phone className="w-4 h-4" />
+                                <span>Call 24×7 Helpline</span>
+                            </a>
+                        </div>
 
+                        {/* Optional: ছোট করে নম্বর দেখানো */}
+                        <p className="mt-4 text-xs text-gray-600">
+                            24×7 Helpline: <strong>+91 626-266-6631</strong>
+                        </p>
 
                     </div>
                 </div>

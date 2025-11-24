@@ -56,7 +56,7 @@ const ServicesPage = () => {
         {
             icon: <FileCheck className="w-12 h-12" />,
             title: "TPA & Insurance Support",
-            description: "Hassle-free cashless treatment and claim settlement with all major insurers.",
+            description: "Hassle-free treatment and claim settlement with all major insurers.",
             features: ["Cashless Everywhere", "Claim Assistance", "Pre-Approval Help", "300+ Hospitals"],
         },
         {
@@ -262,7 +262,7 @@ const ServicesPage = () => {
 
                                     <div className="pt-6 border-t border-gray-100">
                                         <a
-                                            href="/become-member"
+                                            href="https://mlsupport.org/ML_support/Customer/login.php"
                                             className="text-green-600 font-bold hover:text-green-700 flex items-center gap-2 group/link"
                                         >
                                             Get This Service
@@ -377,14 +377,31 @@ const ServicesPage = () => {
                     </div>
 
                     {/* Final CTA Button */}
-                    <a
-                        href="/become-member"
-                        className="group inline-flex items-center gap-4 bg-green-400 text-green-900 font-bold text-xl px-14 py-6 rounded-full hover:bg-green-300 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
-                    >
-                        <Shield className="w-7 h-7" />
-                        Start Protecting Your Family Today
-                        <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
-                    </a>
+
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-10">
+                        <a
+                            href="/become-member"
+                            className="group inline-flex items-center gap-4 bg-green-400 text-green-900 font-bold text-xl px-14 py-6 rounded-full hover:bg-green-300 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
+                        >
+                            <Shield className="w-7 h-7" />
+                            Start Protecting Your Family Today
+                            <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
+                        </a>
+
+                        <a
+                            href="tel:+916262666631"
+                            className="group inline-flex items-center gap-3 bg-white text-green-800 font-bold text-lg px-10 py-6 rounded-full border-4 border-green-400 hover:bg-green-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
+                        >
+                            <Phone className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
+                            <span>Call 24×7 Helpline</span>
+                            <span className="text-sm font-normal opacity-90 block sm:inline">+91 626-266-6631</span>
+                        </a>
+                    </div>
+
+                    {/* Trust Note */}
+                    <p className="mt-8 text-green-200 text-sm">
+                        No hidden charges • 24×7 support • 300+ hospital network
+                    </p>
 
                     {/* Trust Note */}
                     <p className="mt-8 text-green-200 text-sm">

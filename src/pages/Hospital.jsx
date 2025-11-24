@@ -19,7 +19,8 @@ import {
   ChevronRight,
   Users,
   Shield,
-  Ambulance
+  Ambulance,
+  Phone
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -237,13 +238,13 @@ export default function HospitalNetwork() {
   return (
     <>
       <Helmet>
-        <title>ML Support | 300+ Hospitals Network for Cashless Treatment</title>
-        <meta 
-          name="description" 
-          content="Join ML Support for access to 300+ hospitals offering cashless treatment, round-the-clock care, and trusted medical coordination."
+        <title>ML Support | 300+ Hospitals Network for Hassle-Free Treatment </title>
+        <meta
+          name="description"
+          content="Join ML Support for access to 300+ hospitals offering hassle free treatment, and trusted medical coordination."
         />
       </Helmet>
-      
+
       <div className="min-h-screen bg-white text-gray-900">
         <Navbar />
 
@@ -256,7 +257,7 @@ export default function HospitalNetwork() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              300+ Hospital Network for <span className="text-emerald-600">Cashless Treatment</span>
+              300+ Hospital Network for <span className="text-emerald-600">Hassle-Free Treatment</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Access our extensive network of hospitals, diagnostic centres, pathology labs, and medical stores across West Bengal, Jharkhand & Uttar Pradesh
@@ -499,7 +500,7 @@ export default function HospitalNetwork() {
                       {/* Cashless Badge */}
                       <div className="flex items-center gap-2 text-emerald-600 font-medium text-sm bg-emerald-50 px-3 py-2 rounded-lg border border-emerald-200">
                         <Shield size={14} />
-                        Cashless Treatment Available
+                        Hassle-Free Treatment Available
                       </div>
                     </div>
                   </div>
@@ -609,20 +610,34 @@ export default function HospitalNetwork() {
                 Ready to Access Our Hospital Network?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Join thousands of families who enjoy cashless treatment at 300+ hospitals
+                Join thousands of families who enjoy hassle-free treatment at 300+ hospitals
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              {/* Updated Buttons with Call Button */}
+              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                {/* Become a Member */}
                 <a
                   href="/membership"
-                  className="bg-white text-emerald-600 font-bold text-lg py-4 px-8 rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-white text-emerald-600 font-bold text-lg py-4 px-10 rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Become a Member
                 </a>
+
+                {/* Contact Us */}
                 <a
                   href="/contact"
-                  className="border-2 border-white text-white font-bold text-lg py-4 px-8 rounded-xl hover:bg-white/10 transition-all"
+                  className="border-2 border-white text-white font-bold text-lg py-4 px-10 rounded-xl hover:bg-white/10 transition-all backdrop-blur-sm"
                 >
                   Contact Us
+                </a>
+
+                {/* Call 24×7 Helpline - এখন পুরোপুরি ম্যাচিং */}
+                <a
+                  href="tel:+916262666631"
+                  className="inline-flex items-center gap-3 bg-white text-emerald-600 font-bold text-lg py-4 px-10 rounded-xl hover:bg-emerald-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6" />
+                  <span>Call 24×7 Helpline</span>
                 </a>
               </div>
             </div>

@@ -350,7 +350,7 @@ export default function About() {
                                 in touch with our team for immediate assistance.
                             </p>
 
-                            {/* Buttons */}
+                            {/* Buttons - এখানে নতুন কল বাটন যোগ হয়েছে */}
                             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
                                 <button className="bg-white text-green-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-green-50 transition">
                                     Explore Our Services
@@ -359,6 +359,15 @@ export default function About() {
                                 <button className="bg-transparent border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/20 transition">
                                     Contact Us
                                 </button>
+
+                                {/* Call Button - Perfect Match with Design */}
+                                <a
+                                    href="tel:+916262666631"
+                                    className="inline-flex items-center justify-center gap-2 bg-white text-green-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-green-50 transition transform hover:scale-105"
+                                >
+                                    <Phone className="w-5 h-5" />
+                                    <span>Call 24×7 Helpline</span>
+                                </a>
                             </div>
 
                             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 inline-flex flex-wrap justify-center gap-8">
@@ -370,7 +379,6 @@ export default function About() {
                                     <p className="text-2xl font-bold">Free</p>
                                     <p className="text-green-200 text-sm">Online Doctor Consultation</p>
                                 </div>
-
                                 <div className="text-center">
                                     <p className="text-2xl font-bold">24×7</p>
                                     <p className="text-green-200 text-sm">Medical Support</p>
@@ -380,7 +388,7 @@ export default function About() {
                         </div>
 
                     </div>
-                </section >
+                </section>
 
             </div >
             <Footer />
