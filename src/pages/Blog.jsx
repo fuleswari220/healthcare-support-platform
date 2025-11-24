@@ -32,12 +32,12 @@ export default function Blog() {
     },
     {
       id: 3,
-      title: "0% Interest Medical Credit: How We Treated My Mother Without Selling Gold",
-      excerpt: "When hospital bills crossed ₹4.2 lakh, ML Support gave instant 0% interest credit. Here's exactly how it worked.",
+      title: "Free Online Doctor Consultation: How ML Support Helped My Mother Instantly",
+      excerpt: "When my mother needed urgent medical guidance at night, ML Support’s free online doctor consultation helped us avoid panic and take the right steps.",
       date: "November 5, 2025",
       readTime: "6 min",
-      category: "Financial Help",
-      slug: "/blog/zero-interest-medical-credit",
+      category: "Healthcare Support",
+      slug: "/blog/free-online-doctor-consultation",
       author: "Anita Patel",
       image: "https://images.unsplash.com/photo-1554224266-6b49e47a1c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80"
     },
@@ -158,7 +158,7 @@ export default function Blog() {
       {/* Hero */}
       <section className="bg-emerald-50 py-24">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 mt-8">
             ML Support <span className="text-emerald-600">Blog</span>
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -228,11 +228,10 @@ export default function Blog() {
               <button
                 onClick={() => goToPage(currentPage - 1)}
                 disabled={currentPage === 1}
-                className={`px-5 py-3 rounded-lg flex items-center gap-2 font-medium transition-all duration-200 ${
-                  currentPage === 1
+                className={`px-5 py-3 rounded-lg flex items-center gap-2 font-medium transition-all duration-200 ${currentPage === 1
                     ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                     : "bg-emerald-600 text-white hover:bg-emerald-700 shadow-md hover:shadow-emerald-500/25"
-                }`}
+                  }`}
               >
                 <ChevronLeft className="w-5 h-5" /> Previous
               </button>
@@ -241,11 +240,10 @@ export default function Blog() {
                 <button
                   key={i + 1}
                   onClick={() => goToPage(i + 1)}
-                  className={`w-12 h-12 rounded-lg font-bold transition-all duration-200 ${
-                    currentPage === i + 1
+                  className={`w-12 h-12 rounded-lg font-bold transition-all duration-200 ${currentPage === i + 1
                       ? "bg-emerald-600 text-white shadow-lg scale-105"
                       : "bg-gray-100 text-gray-700 hover:bg-emerald-100 hover:shadow-md"
-                  }`}
+                    }`}
                 >
                   {i + 1}
                 </button>
@@ -254,11 +252,10 @@ export default function Blog() {
               <button
                 onClick={() => goToPage(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className={`px-5 py-3 rounded-lg flex items-center gap-2 font-medium transition-all duration-200 ${
-                  currentPage === totalPages
+                className={`px-5 py-3 rounded-lg flex items-center gap-2 font-medium transition-all duration-200 ${currentPage === totalPages
                     ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                     : "bg-emerald-600 text-white hover:bg-emerald-700 shadow-md hover:shadow-emerald-500/25"
-                }`}
+                  }`}
               >
                 Next <ChevronRight className="w-5 h-5" />
               </button>

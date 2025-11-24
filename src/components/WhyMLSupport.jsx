@@ -6,11 +6,28 @@ import appointment from "../assets/doctorappointment.webp";
 
 const WhyMLSupport = () => {
   const benefits = [
-    { title: "Free Ambulance Service in Kolkata", desc: "Our 24×7 fully equipped team ensures safe, reliable ambulance support for any routine or emergency need in Kolkata.", icon: <FaAmbulance className="text-[#00bf63] text-2xl" /> },
-    { title: "Weekly Diabetic & Health Tests at Home", desc: "Convenient, accurate, and reliable weekly health tests at your home.", icon: <FaFlask className="text-[#00bf63] text-2xl" /> },
-    { title: "0% Interest Medical Credit", desc: "0% interest on medical credit across 300+ partner hospitals.", icon: <MdCreditCard className="text-[#00bf63] text-2xl" /> },
-    { title: "24/7 Medical Partner Assistance Helpline", desc: "Quick help when you need it most—our experts handle emergencies, guide paperwork, and ensure you're never alone.", icon: <FaPhoneAlt className="text-[#00bf63] text-2xl" /> },
+    {
+      title: "Free Ambulance Service in Kolkata",
+      desc: "Our 24×7 fully equipped team ensures safe, reliable ambulance support for any routine or emergency need in Kolkata.",
+      icon: <FaAmbulance className="text-[#00bf63] text-2xl" />
+    },
+    {
+      title: "Weekly Diabetic & Health Tests at Home",
+      desc: "Convenient, accurate, and reliable weekly health tests at your home.",
+      icon: <FaFlask className="text-[#00bf63] text-2xl" />
+    },
+    {
+      title: "Free Online Doctor Consultation & Medicine Delivery",
+      desc: "Consult doctors online anytime and get medicines delivered to your home.",
+      icon: <MdCreditCard className="text-[#00bf63] text-2xl" />
+    },
+    {
+      title: "24/7 Medical Partner Assistance Helpline",
+      desc: "Quick help when you need it most—our experts handle emergencies, guide paperwork, and ensure you're never alone.",
+      icon: <FaPhoneAlt className="text-[#00bf63] text-2xl" />
+    },
   ];
+
 
   return (
     <section className="py-16 lg:py-24 bg-white">
@@ -69,7 +86,7 @@ const WhyMLSupport = () => {
                   <div className="w-14 h-14 rounded-full bg-[#e8fff1] flex-shrink-0 flex items-center justify-center shadow-md">
                     {item.icon}
                   </div>
-                  <div className="pr-8 lg:pr-0"> 
+                  <div className="pr-8 lg:pr-0">
                     <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
                       {item.title}
                     </h3>

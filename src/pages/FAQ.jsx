@@ -24,7 +24,7 @@ export default function FAQ() {
         },
         {
             q: "What does my membership include?",
-            a: "Your ML Support membership gives you: <strong>Unlimited free ambulance transfers (180 km)</strong>, <strong>weekly diabetic screenings at home</strong>, <strong>0% interest medical credit</strong>, <strong>300+ partner hospitals for cashless treatment</strong>, <strong>medicine home delivery</strong>, <strong>post-discharge care</strong>, <strong>TPA billing support</strong>, and <strong>24×7 emergency helpline</strong> — everything in one plan!"
+            a: "Your ML Support membership gives you: <strong>Unlimited free ambulance transfers (180 km)</strong>, <strong>weekly diabetic screenings at home</strong>, <strong>free online doctor consultation</strong>, <strong>medicine home delivery</strong>, <strong>300+ partner hospitals for cashless treatment</strong>, <strong>post-discharge care</strong>, <strong>TPA billing support</strong>, and <strong>24×7 emergency helpline</strong> — everything in one plan!"
         },
         {
             q: "What health check-ups are included every week?",
@@ -34,14 +34,14 @@ export default function FAQ() {
             q: "How do I access my plan?",
             a: "Super simple! <strong>1) Call 24×7 helpline (+91-626-266-6631)</strong> for instant ambulance or help. <strong>2) Use member app/login</strong> at ml-support.org to book tests, track services. <strong>3) Show membership card</strong> at partner hospitals for cashless treatment. We're always one call away!"
         },
-        {
-            q: "How does the 0% interest medical credit work?",
-            a: "If hospital bills exceed your insurance or savings, we instantly provide 0% interest credit so you can get treatment without delay. We settle directly with the hospital — you repay comfortably over time with no interest or stress."
-        },
-        {
-            q: "Do you offer cashless treatment?",
-            a: "Yes! Members enjoy cashless admission and treatment at our network of 300+ partner hospitals across India. We also coordinate with your insurance for maximum coverage."
-        },
+        // {
+        //     q: "How does the 0% interest medical credit work?",
+        //     a: "If hospital bills exceed your insurance or savings, we instantly provide 0% interest credit so you can get treatment without delay. We settle directly with the hospital — you repay comfortably over time with no interest or stress."
+        // },
+        // {
+        //     q: "Do you offer cashless treatment?",
+        //     a: "Yes! Members enjoy cashless admission and treatment at our network of 300+ partner hospitals across India. We also coordinate with your insurance for maximum coverage."
+        // },
         {
             q: "Can I use ML Support outside Kolkata?",
             a: "Absolutely. You get ambulance support, hospital coordination, medicine delivery, out-of-state treatment assistance, and 24×7 helpline access anywhere in India."
@@ -90,11 +90,11 @@ export default function FAQ() {
                 />
             </Helmet>
             <Navbar />
-            
+
             {/* Hero Section */}
             <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50 via-white to-green-50">
                 <div className="max-w-4xl mx-auto px-6 text-center">
-                    <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md">
+                    <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md mt-8">
                         <Shield className="w-5 h-5" />
                         Trusted by 65,000+ Families Across India
                     </div>
@@ -132,7 +132,7 @@ export default function FAQ() {
                                     )}
                                 </button>
                                 {openIndex === index && (
-                                    <div 
+                                    <div
                                         className="px-6 pb-6 pt-2 text-gray-700 leading-relaxed border-t border-gray-100"
                                         dangerouslySetInnerHTML={{ __html: faq.a }}
                                     />
@@ -160,7 +160,7 @@ export default function FAQ() {
                         </div>
                         <div className="bg-emerald-50 rounded-2xl p-6">
                             <Phone className="w-12 h-12 text-emerald-600 mx-auto mb-3" />
-                            <p className="text-3xl font-bold text-gray-900">5 min</p>
+                            <p className="text-3xl font-bold text-gray-900">30 s</p>
                             <p className="text-gray-600 mt-1">Avg Response Time</p>
                         </div>
                     </div>
@@ -202,24 +202,24 @@ export default function FAQ() {
                             Our support team is available 24×7 to answer your questions
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-    <a
-        href="mailto:support@mlsupport.org"
-        className="text-emerald-600 font-semibold hover:text-emerald-700 transition flex items-center gap-2"
-    >
-        <Mail className="w-4 h-4" />
-        info@mlsupport.org
-    </a>
-    <span className="text-gray-300 hidden sm:block">|</span>
-    <a
-        href="https://mlsupport.org/ML_support/Customer/login.php"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-emerald-600 font-semibold hover:text-emerald-700 transition flex items-center gap-2"
-    >
-        <LogIn className="w-4 h-4" />
-        Member Login
-    </a>
-</div>
+                            <a
+                                href="mailto:support@mlsupport.org"
+                                className="text-emerald-600 font-semibold hover:text-emerald-700 transition flex items-center gap-2"
+                            >
+                                <Mail className="w-4 h-4" />
+                                info@mlsupport.org
+                            </a>
+                            <span className="text-gray-300 hidden sm:block">|</span>
+                            <a
+                                href="https://mlsupport.org/ML_support/Customer/login.php"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-emerald-600 font-semibold hover:text-emerald-700 transition flex items-center gap-2"
+                            >
+                                <LogIn className="w-4 h-4" />
+                                Member Login
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

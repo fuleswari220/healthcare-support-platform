@@ -51,20 +51,30 @@ const MembershipFullSection = () => {
             </div>
           </div>
 
-          {/* Interest-Free Credit */}
+          {/* Online Doctor & Medicine Delivery */}
           <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-green-500 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
             <div className="text-green-600 text-4xl mb-4">
-              <FaCreditCard className="inline" />
+              <FaStethoscope className="inline" />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">0% Interest Credit</h3>
-            <p className="text-gray-600 flex-grow">Interest-free financial support for all hospital treatments and medical procedures</p>
+
+            <h3 className="text-xl font-bold text-gray-800 mb-3">
+              Free Online Doctor Consultation
+            </h3>
+
+            <p className="text-gray-600 flex-grow">
+              Connect with certified doctors anytime for free and get expert medical guidance.
+            </p>
+
             <div className="mt-4 bg-green-50 rounded-lg p-3">
               <p className="text-sm text-green-700 font-semibold flex items-center">
-                <FaCheck className="mr-2" /> No Hidden Charges
+                <FaCheck className="mr-2" /> Medicine Home Delivery
               </p>
-              <p className="text-xs text-green-600 ml-5">Transparent pricing always</p>
+              <p className="text-xs text-green-600 ml-5">
+                Fast, reliable medicine delivery to your door.             
+                 </p>
             </div>
           </div>
+
 
           {/* Hospital Network */}
           <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-green-500 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
@@ -123,14 +133,14 @@ const MembershipFullSection = () => {
             Join thousands of families who never worry about medical emergencies again
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button 
-            onClick={() => window.open("https://mlsupport.org/ML_support/Customer/login.php", "_blank")}
-            className="bg-green-600 hover:bg-green-700 text-white px-12 py-5 rounded-xl font-bold text-xl shadow-xl transition-all hover:shadow-2xl hover:scale-105">
+            <button
+              onClick={() => window.open("https://mlsupport.org/ML_support/Customer/login.php", "_blank")}
+              className="bg-green-600 hover:bg-green-700 text-white px-12 py-5 rounded-xl font-bold text-xl shadow-xl transition-all hover:shadow-2xl hover:scale-105">
               Activate Lifetime Membership
             </button>
-            <button 
-            onClick={() => window.location.href = "/contact"}
-            className="bg-white hover:bg-green-50 text-green-700 border-2 border-green-600 px-12 py-5 rounded-xl font-bold text-xl transition-all flex items-center justify-center gap-3">
+            <button
+              onClick={() => window.location.href = "/contact"}
+              className="bg-white hover:bg-green-50 text-green-700 border-2 border-green-600 px-12 py-5 rounded-xl font-bold text-xl transition-all flex items-center justify-center gap-3">
               <FaHeadset className="text-xl" />
               Connect With Us
             </button>

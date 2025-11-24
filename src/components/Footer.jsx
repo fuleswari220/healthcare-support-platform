@@ -14,9 +14,10 @@ const Footer = () => {
         <title>ML Support | 24×7 Ambulance & Complete Healthcare in Kolkata</title>
         <meta
           name="description"
-          content="Free ambulance up to 180 km, diabetic tests, 0% medical credit, and 300+ hospital tie-ups. Trusted by 65,000+ families across India."
+          content="Free ambulance up to 180 km, diabetic tests, free online doctor consultation, medicine home delivery, and 300+ hospital tie-ups. Trusted by 65,000+ families across India."
         />
       </Helmet>
+
 
       <footer className="bg-gradient-to-br from-green-900 via-emerald-800 to-green-700 text-white py-16">
         <div className="container mx-auto px-6 grid md:grid-cols-4 gap-10">
@@ -28,9 +29,10 @@ const Footer = () => {
             </div>
 
             <p className="text-emerald-100 mb-4">
-              Free ambulance up to 180 km, diabetic tests, 0% medical credit, and 300+ hospital tie-ups.
+              Free ambulance up to 180 km, diabetic tests, free online doctor consultation, medicine home delivery, and 300+ hospital tie-ups.
               Trusted by 65,000+ families across India.
             </p>
+
 
             <div className="bg-emerald-800/50 rounded-lg p-4 border border-emerald-600">
               <p className="text-emerald-200 text-sm font-semibold">24×7 Ambulance & Complete Healthcare</p>
@@ -159,7 +161,8 @@ const Footer = () => {
               <p className="text-emerald-200 font-semibold mb-2">24/7 Emergency Services</p>
               <div className="space-y-1 text-sm text-emerald-100">
                 <p>• Free Ambulance (180 km)</p>
-                <p>• 0% Medical Credit</p>
+                <p>• Free Online Doctor Consultation</p>
+                <p>• Medicine Home Delivery</p>
                 <p>• Home Diagnostics</p>
                 <p>• 300+ Hospital Network</p>
               </div>

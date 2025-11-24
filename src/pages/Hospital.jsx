@@ -250,7 +250,7 @@ export default function HospitalNetwork() {
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50 via-white to-green-50">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md">
+            <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md mt-8">
               <Shield className="w-5 h-5" />
               Trusted Healthcare Network Across India
             </div>
@@ -276,7 +276,7 @@ export default function HospitalNetwork() {
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
                 <Users className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
-                <p className="text-2xl font-bold text-gray-900">64.6K+</p>
+                <p className="text-2xl font-bold text-gray-900">65+K</p>
                 <p className="text-gray-600">Families</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">

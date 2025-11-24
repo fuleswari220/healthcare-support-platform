@@ -20,7 +20,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50 via-white to-green-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md">
+          <div className="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 rounded-full px-6 py-3 text-sm font-semibold mb-8 shadow-md mt-8">
             <Phone className="w-5 h-5" />
             24×7 Emergency Helpline: <span className="font-bold mx-1">+91-626-266-6631</span>
           </div>

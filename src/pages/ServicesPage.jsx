@@ -69,7 +69,7 @@ const ServicesPage = () => {
 
     const stats = [
         { icon: <Clock className="w-7 h-7" />, value: "24×7", label: "Always Available" },
-        { icon: <Users className="w-7 h-7" />, value: "18,600+", label: "Families Trust Us" },
+        { icon: <Users className="w-7 h-7" />, value: "65,000+", label: "Families Trust Us" },
         { icon: <Shield className="w-7 h-7" />, value: "300+", label: "Hospital Network" },
         { icon: <Heart className="w-7 h-7" />, value: "100%", label: "Care Guaranteed" },
     ];
@@ -83,7 +83,7 @@ const ServicesPage = () => {
         },
         {
             name: "Rajesh Kumar",
-            location: "Howrah", 
+            location: "Howrah",
             text: "Medicine delivery and doctor consultation at home made recovery so much easier.",
             rating: 5
         },
@@ -99,12 +99,12 @@ const ServicesPage = () => {
         <>
             <Helmet>
                 <title>ML Support | 24×7 Ambulance, Home Diagnostics & Credit Care</title>
-                <meta 
-                    name="description" 
+                <meta
+                    name="description"
                     content="Enjoy 24×7 ambulance, lab tests, medicine delivery, and zero-interest medical credit - trusted care, anytime, anywhere"
                 />
             </Helmet>
-            
+
             <Navbar />
 
             {/* Floating Navigation Dots - Desktop Only */}
@@ -130,7 +130,7 @@ const ServicesPage = () => {
             </div>
 
             {/* Hero Section with Background Image */}
-            <section 
+            <section
                 className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
                 style={{
                     backgroundImage: `linear-gradient(rgba(6, 78, 59, 0.85), rgba(6, 95, 70, 0.9)), url(${HeroBg})`,
@@ -139,7 +139,7 @@ const ServicesPage = () => {
                     backgroundAttachment: 'fixed'
                 }}
             >
-                {/* Animated Background Elements */}
+                {/* Animated Background E   lements */}
                 <div className="absolute inset-0">
                     <div className="absolute top-20 left-10 w-4 h-4 bg-green-300 rounded-full animate-pulse"></div>
                     <div className="absolute top-40 right-20 w-6 h-6 bg-green-200 rounded-full animate-pulse delay-300"></div>
@@ -149,10 +149,11 @@ const ServicesPage = () => {
 
                 <div className="relative max-w-7xl mx-auto px-6 text-center">
                     {/* Trust Badge */}
-                    <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-lg rounded-full px-6 py-3 text-sm font-semibold border border-white/30">
+                    <div className="mt-8 inline-flex items-center gap-3 bg-white/20 backdrop-blur-lg rounded-full px-6 py-3 text-sm font-semibold border border-white/30">
                         <Shield className="w-5 h-5" />
-                        Trusted by 18,600+ Families in Kolkata
+                        Trusted by 65,000+ Families in Kolkata
                     </div>
+
 
                     {/* Main Heading */}
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -169,8 +170,8 @@ const ServicesPage = () => {
                     {/* Stats with Enhanced Design */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
                         {stats.map((stat, i) => (
-                            <div 
-                                key={i} 
+                            <div
+                                key={i}
                                 className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                             >
                                 <div className="text-green-300 mb-3 flex justify-center">{stat.icon}</div>
@@ -180,7 +181,7 @@ const ServicesPage = () => {
                         ))}
                     </div>
 
-                    
+
                 </div>
 
                 {/* Enhanced Scroll Indicator */}
@@ -204,13 +205,13 @@ const ServicesPage = () => {
             </section>
 
             {/* Services Grid with Pattern Background */}
-            <section 
+            <section
                 className="relative py-24 bg-gray-50 overflow-hidden"
                 id="services-section"
             >
                 {/* Background Overlay */}
                 <div className="absolute inset-0 bg-white/95"></div>
-                
+
                 <div className="relative max-w-7xl mx-auto px-6">
                     <div className="text-center mb-20">
                         <div className="inline-flex items-center gap-2 text-green-600 bg-green-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">
@@ -229,16 +230,15 @@ const ServicesPage = () => {
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className={`relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden ${
-                                    service.highlight ? 'ring-2 ring-green-500 ring-offset-4' : ''
-                                } hover:transform hover:-translate-y-2`}
+                                className={`relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden ${service.highlight ? 'ring-2 ring-green-500 ring-offset-4' : ''
+                                    } hover:transform hover:-translate-y-2`}
                             >
                                 {service.highlight && (
                                     <div className="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                                         MOST POPULAR
                                     </div>
                                 )}
-                                
+
                                 <div className="p-8 lg:p-10">
                                     <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-6 text-green-600 group-hover:from-green-500 group-hover:to-emerald-500 group-hover:text-white transition-all duration-300">
                                         {service.icon}
@@ -330,7 +330,7 @@ const ServicesPage = () => {
             </section>
 
             {/* Final CTA with Background Image */}
-            <section 
+            <section
                 className="relative py-24 text-white overflow-hidden"
                 id="cta-section"
                 style={{
@@ -358,7 +358,7 @@ const ServicesPage = () => {
                         <span className="text-green-300">Lifetime Peace of Mind.</span>
                     </h2>
                     <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed">
-                        Join 18,600+ families in Kolkata who never worry about medical emergencies again.
+                        Join 65,000+ families in Kolkata who never worry about medical emergencies again.
                     </p>
 
                     {/* Features Grid */}

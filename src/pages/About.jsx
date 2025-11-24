@@ -36,17 +36,17 @@ export default function About() {
             text: "We treat every patient like our own family.",
         },
     ];
-    
+
     return (
         <>
             <Helmet>
                 <title>About ML Support | India's Trusted 24×7 Healthcare Assistance</title>
-                <meta 
-                    name="description" 
-                    content="India's 1st all-in-one healthcare membership since 2020. 18,600+ families trust ML Support for free ambulance, diabetic care & 24×7 help."
+                <meta
+                    name="description"
+                    content="India's 1st all-in-one healthcare membership since 2020. 65,000+ families trust ML Support for free ambulance, diabetic care & 24×7 help."
                 />
             </Helmet>
-            
+
             <Navbar />
             <div className="font-sans text-gray-800">
                 {/* Hero Section */}
@@ -59,7 +59,7 @@ export default function About() {
                             Our Mission – To Make <span className="text-green-300">Healthcare</span> Truly Accessible
                         </h1>
                         <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-95 font-light mb-8">
-                            India's first all-in-one healthcare membership providing free ambulance services, diagnostics, and 0% interest medical credit.
+                            India’s first all-in-one healthcare membership with free ambulance services, diagnostics, online doctor consultation, and medicine delivery.
                         </p>
 
                     </div>
@@ -74,9 +74,10 @@ export default function About() {
                             </div>
                             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-center border border-white/20">
                                 <Stethoscope className="w-8 h-8 mx-auto mb-2" />
-                                <p className="text-2xl md:text-3xl font-bold">0%</p>
-                                <p className="text-sm opacity-90">Medical Credit</p>
+                                <p className="text-2xl md:text-3xl font-bold">Free</p>
+                                <p className="text-sm opacity-90">Online Doctor Consultation</p>
                             </div>
+
                             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-center border border-white/20">
                                 <Clock className="w-8 h-8 mx-auto mb-2" />
                                 <p className="text-2xl md:text-3xl font-bold">24/7</p>
@@ -112,11 +113,12 @@ export default function About() {
                             <div className="space-y-6">
                                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Making Healthcare a Guarantee, Not a Gamble</h2>
                                 <p className="text-lg text-gray-700 leading-relaxed">
-                                    Since 2020, ML Support Private Limited has stood for one promise - making quality healthcare
+                                    Since 2020, ML Support Private Limited has stood for one promise — making quality healthcare
                                     a guarantee, not a gamble. As India's first all-in-one healthcare membership, we provide
-                                    free ambulance services, diagnostics, and 0% interest medical credit, ensuring care is
-                                    always within reach.
+                                    free ambulance services, diagnostics, free online doctor consultation, and medicine home delivery,
+                                    ensuring care is always within reach.
                                 </p>
+
                                 <p className="text-lg text-gray-700 leading-relaxed">
                                     India - the land of the Charaka, Sushruta, and Ayurveda with Sanjivani potential, has shown
                                     the world the efficiency of Medical Science and has been propagating the same even today.
@@ -139,7 +141,7 @@ export default function About() {
                                     <div className="flex items-center gap-3">
                                         <Users className="w-8 h-8" />
                                         <div>
-                                            <p className="text-2xl font-bold">18,600+</p>
+                                            <p className="text-2xl font-bold">65,000+</p>
                                             <p className="text-sm">Families Trust Us</p>
                                         </div>
                                     </div>
@@ -178,8 +180,9 @@ export default function About() {
                                     <div className="text-center p-4">
                                         <CreditCard className="w-12 h-12 text-green-600 mx-auto mb-4" />
                                         <h3 className="font-semibold text-lg mb-2">Affordable Care</h3>
-                                        <p className="text-gray-600">0% interest medical credit</p>
+                                        <p className="text-gray-600">Free online doctor consultation & medicine delivery</p>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -200,7 +203,7 @@ export default function About() {
                                 <div className="relative w-48 h-48 rounded-full bg-green-50 border-4 border-green-100 shadow-lg flex flex-col items-center justify-center mb-4 
                               ring-2 ring-green-200 ring-offset-2">
                                     <Users className="w-8 h-8 text-green-600 mb-2" />
-                                    <p className="text-xl font-bold text-green-700">18,600+</p>
+                                    <p className="text-xl font-bold text-green-700">65,000+</p>
                                 </div>
                                 <p className="text-gray-600 font-medium">Families Trust Us</p>
                             </div>
@@ -240,7 +243,7 @@ export default function About() {
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-4">
                                     {[
-                                        "18,600+ families trust us as their healthcare partner",
+                                        "65,000+ families trust us as their healthcare partner",
                                         "Partnered with 300+ hospitals across India",
                                         "Delivered thousands of free ambulance transfers"
                                     ].map((item, index) => (
@@ -362,10 +365,13 @@ export default function About() {
                                 <div className="text-center">
                                     <p className="text-2xl font-bold">Free</p>
                                     <p className="text-green-200 text-sm">Ambulance Service</p>
-                                </div> <div className="text-center">
-                                    <p className="text-2xl font-bold">0% Interest</p>
-                                    <p className="text-green-200 text-sm">Medical Credit</p>
-                                </div> <div className="text-center">
+                                </div>
+                                <div className="text-center">
+                                    <p className="text-2xl font-bold">Free</p>
+                                    <p className="text-green-200 text-sm">Online Doctor Consultation</p>
+                                </div>
+
+                                <div className="text-center">
                                     <p className="text-2xl font-bold">24×7</p>
                                     <p className="text-green-200 text-sm">Medical Support</p>
                                 </div>
