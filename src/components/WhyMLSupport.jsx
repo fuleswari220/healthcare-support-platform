@@ -1,10 +1,42 @@
 import { FaPhoneAlt, FaAmbulance, FaFlask } from "react-icons/fa";
 import { MdCreditCard } from "react-icons/md";
-import { IoIosArrowForward } from "react-icons/io";
-import diabetes from "../assets/diabetes.webp";
 import appointment from "../assets/doctorappointment.webp";
 
+// Add your hospital logo imports here
+import h1 from "../assets/Partners/Anandalok Hospital Logo.png";
+import h2 from "../assets/Partners/Bardhaman Institute of Medical Sciences Logo.png";
+import h3 from "../assets/Partners/Bengal FAITH Hospital Logo.png";
+import h4 from "../assets/Partners/Apoorva Diagnostic Centre Logo.png";
+import h5 from "../assets/Partners/CAMRI Hospital Logo.png";
+import h6 from "../assets/Partners/Dr. Lal Path Lab Logo.png";
+import h7 from "../assets/Partners/ECO Hospital and Diagnostics Logo.png";
+import h8 from "../assets/Partners/Galaxy Hospital Logo.png";
+import h9 from "../assets/Partners/Galaxy Multispeciality Hospital Logo.png";
+import h10 from "../assets/Partners/Gouri Devi Hospital & Research Institute Logo.png";
+import h11 from "../assets/Partners/HCG Cancer Centre New Town Logo.png";
+import h12 from "../assets/Partners/Health Point Bolpur Logo.png";
+import h13 from "../assets/Partners/Rajni Hospital Logo.png";
+import h14 from "../assets/Partners/IQ City Medical College Hospital Logo.png";
+import h15 from "../assets/Partners/Jagannath Gupta Institute of Medical Sciences Logo.png";
+import h16 from "../assets/Partners/PGR Multispecility Hospital Logo.png";
+import h17 from "../assets/Partners/KIMS Hospital Logo.png";
+import h18 from "../assets/Partners/Manipal Hospital LOGO.png";
+import h19 from "../assets/Partners/Ramadevi Medical Centre Logo.png";
+import h20 from "../assets/Partners/Ramkrishna Nursing Home Logo.png";
+import h21 from "../assets/Partners/Sanaka Hospital Logo.png";
+import h22 from "../assets/Partners/Santiniketan Sebaniketan Logo.png";
+import h23 from "../assets/Partners/Sharanya Multispeciality Hospital Logo.png";
+import h24 from "../assets/Partners/Spandan Hospital LOGO.png";
+import h25 from "../assets/Partners/Teresa Memorial Hospital Logo.png";
+import h26 from "../assets/Partners/The Mission Hospital Logo.png";
+import h27 from "../assets/Partners/Viva city Logo.png";
+import h28 from "../assets/Partners/Vivekananda Hospital Logo.png";
+import h29 from "../assets/Partners/Rajrani Hospital Logo.png";
+
+import InfiniteHospitalSlider from "./InfiniteHospitalSlider";
+
 const WhyMLSupport = () => {
+  const logos = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h26, h27, h28, h29];
   const benefits = [
     {
       title: "Free Ambulance Service",
@@ -39,7 +71,7 @@ const WhyMLSupport = () => {
             Healthcare Without Limits - For Every Home
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-green-700 font-semibold max-w-4xl mx-auto">
-            ML Support makes healthcare easy, affordable, and always available—bringing full medical assistance to your  home without extra costs or delays.
+            ML Support makes healthcare easy, affordable, and always available—bringing full medical assistance to your home without extra costs or delays.
           </p>
         </div>
 
@@ -109,42 +141,21 @@ const WhyMLSupport = () => {
         </div>
 
         {/* Trust Section */}
-        <div className="text-center mt-16 lg:mt-20">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            Beyond Treatment – A Relationship at Trust
-          </h2>
-          <p className="text-gray-500 mt-3 text-base">
-            There are several reasons why patients trust our complete medical support.
+        <div className="text-center mt-20">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+            Trusted by Leading <span className="text-green-600">Healthcare</span> Partners
+          </h1>
+
+          <p className="text-gray-600 mt-4 text-lg sm:text-xl max-w-2xl mx-auto">
+            We collaborate with the most reputed hospitals to provide complete and reliable medical care for every family.
           </p>
+
+          <div className="mt-2 mx-auto w-24 h-1 bg-emerald-500 rounded-full"></div>
         </div>
 
-        {/* Testimonial Card – Clean & Responsive */}
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 flex flex-col md:flex-row items-center gap-8">
-            <img
-              src={diabetes}
-              alt="Patient testimonial"
-              className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-2xl flex-shrink-0"
-            />
-            <div className="flex-1 text-center md:text-left">
-              <p className="text-gray-700 italic text-base md:text-lg leading-relaxed">
-                “The diabetic setup screening at home ensures secure support and gives you confidence in your care process every day.”
-              </p>
-              <a
-                href="https://mlsupport.org/ML_support/Customer/login.php"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-block bg-[#00bf63] hover:bg-[#00a156] text-white font-bold px-6 py-3 rounded-full transition transform hover:scale-105 shadow-lg"
-              >
-                Login Now
-              </a>
-            </div>
-            <div className="w-12 h-12 rounded-full bg-[#23e386] flex items-center justify-center text-white text-2xl shadow-lg">
-              <IoIosArrowForward />
-            </div>
-          </div>
+        <div className="relative">
+          <InfiniteHospitalSlider images={logos} />
         </div>
-
       </div>
     </section>
   );

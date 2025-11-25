@@ -44,8 +44,8 @@ const Footer = () => {
 
   const addresses = [
     {
-      location: "West Bengal - Mani Casadona International Financial Hub",
-      details: "West Tower, 3WS5D, Kolkata, 700160"
+      location: "West Bengal - PS Abacus Building, NH12, Action Area IIE, New Town",
+      details: "Kolkata, 700157"
     },
     {
       location: "West Bengal – Techno Polis, Salt Lake",
@@ -231,24 +231,12 @@ const Footer = () => {
         {/* Bottom Bar - Final Safe Version */}
         <div className="border-t border-green-700">
           <div className="container mx-auto px-6 py-4">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-4 text-center">
 
               {/* Copyright */}
               <p className="text-green-300 text-sm">
                 © {currentYear} ML Support Private Limited. All rights reserved.
               </p>
-
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap justify-center gap-4 text-green-300 text-sm">
-                <span className="flex items-center gap-1">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
-                  24×7 Active
-                </span>
-                <span>•</span>
-                <span>65,000+ Happy Families</span>
-                <span>•</span>
-                <span>300+ Hospital Partners</span>
-              </div>
 
             </div>
           </div>
