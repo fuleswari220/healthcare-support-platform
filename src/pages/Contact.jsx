@@ -83,7 +83,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <label className="block text-sm font-semibold text-gray-700">Service Needed</label>
                   <select className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white">
                     <option>Select a service</option>
@@ -94,7 +94,7 @@ const Contact = () => {
                     <option>Medicine Delivery</option>
                     <option>Other</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-gray-700">Message *</label>
