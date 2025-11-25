@@ -110,19 +110,19 @@ const ServicesPage = () => {
             {/* Floating Navigation Dots - Desktop Only */}
             <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:flex flex-col gap-6">
                 {[
-                    { id: 'services-section', label: 'Services', icon: <Ambulance size={12} /> },
-                    { id: 'testimonials-section', label: 'Reviews', icon: <Star size={12} /> },
-                    { id: 'cta-section', label: 'Get Started', icon: <Shield size={12} /> }
+                    { id: 'services-section', label: 'Services', icon: <Ambulance size={16} /> },
+                    { id: 'testimonials-section', label: 'Reviews', icon: <Star size={16} /> },
+                    { id: 'cta-section', label: 'Get Started', icon: <Shield size={16} /> }
                 ].map((section, index) => (
                     <button
                         key={section.id}
                         onClick={() => scrollToSection(section.id)}
                         className="group flex items-center gap-3 transition-all duration-300"
                     >
-                        <span className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0 bg-black/30 backdrop-blur-lg px-3 py-1 rounded-full">
+                        <span className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0 bg-black/50 backdrop-blur-lg px-3 py-2 rounded-full border border-white/20">
                             {section.label}
                         </span>
-                        <div className="flex items-center justify-center w-8 h-8 rounded-full border-2 border-white/60 group-hover:border-green-300 group-hover:bg-green-300 transition-all duration-300">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-green-600 border-2 border-white/60 group-hover:border-green-300 group-hover:bg-green-500 transition-all duration-300 shadow-lg">
                             {section.icon}
                         </div>
                     </button>
