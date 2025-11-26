@@ -1,16 +1,17 @@
-"use client";
-
 import React from "react";
 
 const InfiniteHospitalSlider = ({ images = [] }) => {
+  // Duplicate images to create the seamless loop effect
   const duplicatedImages = [...images, ...images];
 
   return (
-    <div className="relative w-full overflow-hidden py-12 mt-10">
+    // Added bg-white to ensure clean background behind logos
+    <div className="relative w-full overflow-hidden py-12 mt-10 bg-white">
       <div
-        className="flex"
+        className="flex w-max"
+        // Ensure backticks (`) are used here
         style={{
-          animation: `slide ${images.length * 0.5}s linear infinite`,
+          animation: `slide ${images.length * 4}s linear infinite`,
         }}
       >
         {duplicatedImages.map((src, index) => (
@@ -18,25 +19,25 @@ const InfiniteHospitalSlider = ({ images = [] }) => {
             key={index}
             className="flex-shrink-0 w-64 md:w-80 px-8 flex items-center justify-center"
           >
+            {/* Removed hover, grayscale, transition, and opacity classes.
+               Logos will now appear in full color normally.
+            */}
             <img
               src={src}
               alt={`Partner ${index + 1}`}
-              className="h-20 md:h-24 w-auto object-contain transition-all duration-300 hover:scale-110"
+              className="h-20 md:h-24 w-auto object-contain"
             />
           </div>
         ))}
       </div>
 
-      {/* Fade edges */}
-      {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent" /> */}
-      {/* <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent" /> */}
-
-      <style jsx>{`
+      <style>{`
         @keyframes slide {
           0% {
             transform: translateX(0);
           }
           100% {
+            /* Kept at -50% for seamless looping */
             transform: translateX(-50%);
           }
         }
@@ -45,4 +46,4 @@ const InfiniteHospitalSlider = ({ images = [] }) => {
   );
 };
 
-export default InfiniteHospitalSlider;  
+export default InfiniteHospitalSlider;

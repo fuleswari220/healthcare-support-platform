@@ -3,40 +3,42 @@ import { MdCreditCard } from "react-icons/md";
 import appointment from "../assets/doctorappointment.webp";
 
 // Add your hospital logo imports here
-import h1 from "../assets/Partners/Anandalok Hospital Logo.png";
-import h2 from "../assets/Partners/Bardhaman Institute of Medical Sciences Logo.png";
-import h3 from "../assets/Partners/Bengal FAITH Hospital Logo.png";
-import h4 from "../assets/Partners/Apoorva Diagnostic Centre Logo.png";
-import h5 from "../assets/Partners/CAMRI Hospital Logo.png";
-import h6 from "../assets/Partners/Dr. Lal Path Lab Logo.png";
-import h7 from "../assets/Partners/ECO Hospital and Diagnostics Logo.png";
-import h8 from "../assets/Partners/Galaxy Hospital Logo.png";
-import h9 from "../assets/Partners/Galaxy Multispeciality Hospital Logo.png";
-import h10 from "../assets/Partners/Gouri Devi Hospital & Research Institute Logo.png";
-import h11 from "../assets/Partners/HCG Cancer Centre New Town Logo.png";
-import h12 from "../assets/Partners/Health Point Bolpur Logo.png";
-import h13 from "../assets/Partners/Rajni Hospital Logo.png";
-import h14 from "../assets/Partners/IQ City Medical College Hospital Logo.png";
-import h15 from "../assets/Partners/Jagannath Gupta Institute of Medical Sciences Logo.png";
-import h16 from "../assets/Partners/PGR Multispecility Hospital Logo.png";
-import h17 from "../assets/Partners/KIMS Hospital Logo.png";
-import h18 from "../assets/Partners/Manipal Hospital LOGO.png";
-import h19 from "../assets/Partners/Ramadevi Medical Centre Logo.png";
-import h20 from "../assets/Partners/Ramkrishna Nursing Home Logo.png";
-import h21 from "../assets/Partners/Sanaka Hospital Logo.png";
-import h22 from "../assets/Partners/Santiniketan Sebaniketan Logo.png";
-import h23 from "../assets/Partners/Sharanya Multispeciality Hospital Logo.png";
-import h24 from "../assets/Partners/Spandan Hospital LOGO.png";
-import h25 from "../assets/Partners/Teresa Memorial Hospital Logo.png";
-import h26 from "../assets/Partners/The Mission Hospital Logo.png";
-import h27 from "../assets/Partners/Viva city Logo.png";
-import h28 from "../assets/Partners/Vivekananda Hospital Logo.png";
-import h29 from "../assets/Partners/Rajrani Hospital Logo.png";
+import h1 from "../assets/Partners/AnandalokHospitalLogo.png";
+import h2 from "../assets/Partners/BardhamanInstituteofMedicalSciencesLogo.png";
+import h3 from "../assets/Partners/BengalFAITHHospitalLogo.png";
+import h4 from "../assets/Partners/ApoorvaDiagnosticCentreLogo.png";
+import h5 from "../assets/Partners/CAMRIHospitalLogo.png";
+import h6 from "../assets/Partners/Dr.LalPathLabLogo.png";
+import h7 from "../assets/Partners/ECOHospitalandDiagnosticsLogo.png";
+import h8 from "../assets/Partners/GalaxyHospitalLogo.png";
+import h9 from "../assets/Partners/GalaxyMultispecialityHospitalLogo.png";
+import h10 from "../assets/Partners/GouriDeviLogo.png";
+import h11 from "../assets/Partners/HCGCancerCentreNewTownLogo.png";
+import h12 from "../assets/Partners/HealthPointBolpurLogo.png";
+import h13 from "../assets/Partners/RajniHospitalLogo.png";
+import h14 from "../assets/Partners/IQCityMedicalCollegeHospitalLogo.png";
+import h15 from "../assets/Partners/JagannathGuptaInstituteofMedicalSciencesLogo.png";
+import h16 from "../assets/Partners/PGRMultispecilityHospitalLogo.png";
+import h17 from "../assets/Partners/KIMSHospitalLogo.png";
+import h18 from "../assets/Partners/ManipalHospitalLOGO.png";
+import h19 from "../assets/Partners/RamadeviMedicalCentreLogo.png";
+import h20 from "../assets/Partners/RamkrishnaNursingHomeLogo.png";
+import h21 from "../assets/Partners/SanakaHospitalLogo.png";
+import h22 from "../assets/Partners/SantiniketanSebaniketanLogo.png";
+import h23 from "../assets/Partners/SharanyaMultispecialityHospitalLogo.png";
+import h24 from "../assets/Partners/SpandanHospitalLOGO.png";
+import h25 from "../assets/Partners/TeresaMemorialHospitalLogo.png";
+import h26 from "../assets/Partners/TheMissionHospitalLogo.png";
+import h27 from "../assets/Partners/VivacityLogo.png";
+import h28 from "../assets/Partners/VivekanandaHospitalLogo.png";
+import h29 from "../assets/Partners/RajraniHospitalLogo.png";
 
 import InfiniteHospitalSlider from "./InfiniteHospitalSlider";
 
 const WhyMLSupport = () => {
   const logos = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h26, h27, h28, h29];
+  console.log("Logos count:", logos.length, logos);
+
   const benefits = [
     {
       title: "Free Ambulance Service",
@@ -157,7 +159,7 @@ const WhyMLSupport = () => {
           <InfiniteHospitalSlider images={logos} />
         </div>
       </div>
-    </section>
+    </section>  
   );
 };
 
