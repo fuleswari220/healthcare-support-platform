@@ -12,7 +12,7 @@ import h6 from "../assets/Partners/Dr.LalPathLabLogo.png";
 import h7 from "../assets/Partners/ECOHospitalandDiagnosticsLogo.png";
 import h8 from "../assets/Partners/GalaxyHospitalLogo.png";
 import h9 from "../assets/Partners/GalaxyMultispecialityHospitalLogo.png";
-import h10 from "../assets/Partners/GouriDeviLogo.png";
+import h10 from "../assets/Partners/GouriDevilogo.png";
 import h11 from "../assets/Partners/HCGCancerCentreNewTownLogo.png";
 import h12 from "../assets/Partners/HealthPointBolpurLogo.png";
 import h13 from "../assets/Partners/RajniHospitalLogo.png";
