@@ -5,11 +5,9 @@ const InfiniteHospitalSlider = ({ images = [] }) => {
   const duplicatedImages = [...images, ...images];
 
   return (
-    // Added bg-white to ensure clean background behind logos
-    <div className="relative w-full overflow-hidden py-12 mt-10 bg-white">
+    <div className="relative w-full overflow-hidden py-6 md:py-8 lg:py-12 bg-white">
       <div
         className="flex w-max"
-        // Ensure backticks (`) are used here
         style={{
           animation: `slide ${images.length * 4}s linear infinite`,
         }}
@@ -17,15 +15,22 @@ const InfiniteHospitalSlider = ({ images = [] }) => {
         {duplicatedImages.map((src, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-64 md:w-80 px-8 flex items-center justify-center"
+            className="flex-shrink-0 px-4 md:px-6 lg:px-8 flex items-center justify-center"
+            style={{
+              // Responsive width and height
+              width: "clamp(140px, 20vw, 280px)",
+              height: "clamp(110px, 15vw, 220px)",
+            }}
           >
-            {/* Removed hover, grayscale, transition, and opacity classes.
-               Logos will now appear in full color normally.
-            */}
             <img
               src={src}
               alt={`Partner ${index + 1}`}
-              className="h-20 md:h-24 w-auto object-contain"
+              // Responsive image sizing
+              className="w-auto object-contain"
+              style={{
+                height: "clamp(60px, 8vw, 96px)",
+                maxWidth: "90%",
+              }}
             />
           </div>
         ))}
@@ -37,8 +42,27 @@ const InfiniteHospitalSlider = ({ images = [] }) => {
             transform: translateX(0);
           }
           100% {
-            /* Kept at -50% for seamless looping */
             transform: translateX(-50%);
+          }
+        }
+
+        /* Mobile-first responsive adjustments */
+        @media (max-width: 640px) {
+          .flex.w-max {
+            animation-duration: ${images.length * 3}s !important;
+          }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .flex.w-max {
+            animation-duration: ${images.length * 3.5}s !important;
+          }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+          .flex.w-max {
+            animation: none;
           }
         }
       `}</style>
