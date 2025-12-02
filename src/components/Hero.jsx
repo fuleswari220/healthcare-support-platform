@@ -37,10 +37,11 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="w-full min-h-screen bg-gradient-to-br from-white to-green-50 pt-16 flex items-center"
+      className="w-full min-h-screen bg-gradient-to-br from-white to-green-50 pt-20 flex items-center" // pt-16 → pt-20 (Navbar এর জন্য)
     >
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:max-w-7xl mx-auto py-12 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
           {/* LEFT CONTENT */}
           <motion.div
             variants={containerVariants}
@@ -74,14 +75,14 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT SIDE GRID – সমান উচ্চতার গ্যারান্টি */}
+          {/* RIGHT SIDE GRID */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={mainControls}
-            className="grid grid-cols-2 gap-4 sm:gap-6 auto-rows-fr" // এটাই ম্যাজিক লাইন
+            className="grid grid-cols-2 gap-4 sm:gap-6 auto-rows-fr"
           >
-            {/* TALL DOCTOR CARD – row-span-2 */}
+            {/* TALL DOCTOR CARD */}
             <motion.div
               variants={cardVariants}
               whileHover="hover"
