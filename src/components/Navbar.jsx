@@ -24,16 +24,6 @@ const Navbar = () => {
 
   return (
     <>
-       {/* ===== Ad ===== */}
-      {/* <div
-        id="seo-top-banner"
-        className="fixed top-0 left-0 w-full h-16 md:h-20 lg:h-20 bg-gray-900 text-white text-center flex items-center justify-center z-[60] text-sm md:text-base font-medium shadow-lg"
-      >
-        <span className="opacity-40 animate-pulse">
-          Ad
-        </span>
-      </div> */}
-      
       {/* Main Navbar */}
       <nav className="w-full fixed top-0 left-0 z-50 bg-gradient-to-r from-green-50 via-white to-green-50 shadow-lg border-b border-green-100">
         <div className="absolute inset-0 bg-gradient-to-b from-green-50/30 to-transparent pointer-events-none"></div>
@@ -46,8 +36,8 @@ const Navbar = () => {
               <img src={logo} alt="Logo" className="h-14 sm:h-18 w-auto object-contain" />
             </Link>
 
-            {/* Desktop Menu*/}
-            <div className="hidden lg:flex items-center space-x-1">
+            {/* Desktop Menu - এখন md (768px) থেকে শুরু */}
+            <div className="hidden md:flex items-center space-x-1">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
@@ -65,8 +55,8 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Desktop Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+            {/* Desktop Buttons - md থেকে দেখাবে */}
+            <div className="hidden md:flex items-center space-x-4">
               <a
                 href="https://mlsupport.org/ML_support/Customer/login.php"
                 target="_blank"
@@ -86,10 +76,10 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Mobile Hamburger Button */}
+            {/* Mobile Hamburger Button - শুধু md এর নিচে দেখাবে */}
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden text-gray-700 text-3xl p-2 bg-green-50 rounded-lg border border-green-200"
+              className="md:hidden text-gray-700 text-3xl p-2 bg-green-50 rounded-lg border border-green-200"
             >
               {open ? <GiCrossMark /> : <HiMenuAlt3 />}
             </button>
@@ -97,17 +87,17 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay (Click outside to close) */}
+      {/* Mobile Menu Overlay - শুধু মোবাইলে */}
       {open && (
         <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-60 z-40"
+          className="md:hidden fixed inset-0 bg-black bg-opacity-60 z-40"
           onClick={closeMenu}
         />
       )}
 
-      {/* Mobile Sliding Menu */}
+      {/* Mobile Sliding Menu - শুধু মোবাইলে */}
       <div
-        className={`lg:hidden fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`md:hidden fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-500 ease-in-out ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
