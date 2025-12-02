@@ -69,17 +69,17 @@ const MembershipFullSection = () => {
   ];
 
   return (
-    <section className="bg-white py-20 lg:py-28" id="membershipBenefits">
+    <section className="py-20 lg:py-28" id="membershipBenefits">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 border border-green-200 rounded-full px-4 py-2 text-sm font-semibold mb-6">
+          {/* <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 border border-green-200 rounded-full px-4 py-2 text-sm font-semibold mb-6">
             <Shield className="w-4 h-4" />
             Trusted by 65,000+ Families
-          </div>
+          </div> */}
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="heading-primary font-bold text-gray-900 mb-6 leading-tight">
             With ML Support, You're Not Just a Patient
           </h1>
           

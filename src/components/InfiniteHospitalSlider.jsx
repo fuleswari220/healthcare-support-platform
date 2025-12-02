@@ -1,42 +1,51 @@
 import React from "react";
 
-const InfiniteHospitalSlider = ({ images = [] }) => {
-  // Duplicate images to create the seamless loop effect
-  const duplicatedImages = [...images, ...images];
+const InfiniteHospitalSlider = ({ logos = [] }) => {
+  if (!logos || logos.length === 0) return null;
+
+  const duplicatedLogos = [...logos, ...logos];
+
+  const animationDuration = `${logos.length * 3.8}s`;
 
   return (
-    <div className="relative w-full overflow-hidden py-6 md:py-8 lg:py-12 bg-white">
+    <div className="relative w-full overflow-hidden py-8 bg-white">
       <div
         className="flex w-max"
         style={{
-          animation: `slide ${images.length * 4}s linear infinite`,
+          animation: `slide ${animationDuration} linear infinite`,
         }}
       >
-        {duplicatedImages.map((src, index) => (
+        {duplicatedLogos.map((item, index) => (
           <div
             key={index}
-            className="flex-shrink-0 px-4 md:px-6 lg:px-8 flex items-center justify-center"
+            className="flex-shrink-0 flex items-center justify-center px-5 md:px-8"
             style={{
-              // Responsive width and height
-              width: "clamp(140px, 20vw, 280px)",
-              height: "clamp(110px, 15vw, 220px)",
+              minWidth: "200px",
             }}
           >
             <img
-              src={src}
-              alt={`Partner ${index + 1}`}
-              // Responsive image sizing
-              className="w-auto object-contain"
+              src={item.src}
+              alt={`Hospital partner ${index + 1}`}
+              className="w-auto object-contain transition-transform duration-300"
               style={{
-                height: "clamp(60px, 8vw, 96px)",
-                maxWidth: "90%",
+                height:
+                  item.size === "big"
+                    ? "clamp(100px, 13vw, 150px)"
+                    : "clamp(65px, 8vw, 95px)",
+                filter: "drop-shadow(0 4px 10px rgba(0,0,0,0.08))",
               }}
             />
+
           </div>
         ))}
       </div>
 
-      <style>{`
+      {/* CSS Animation */}
+      <style jsx>{`
+        img:hover {
+          transform: scale(1.15);
+        }
+
         @keyframes slide {
           0% {
             transform: translateX(0);
@@ -46,23 +55,15 @@ const InfiniteHospitalSlider = ({ images = [] }) => {
           }
         }
 
-        /* Mobile-first responsive adjustments */
         @media (max-width: 640px) {
-          .flex.w-max {
-            animation-duration: ${images.length * 3}s !important;
+          div[style*="animation"] {
+            animation-duration: ${logos.length * 3}s !important;
           }
         }
 
-        @media (min-width: 641px) and (max-width: 1024px) {
-          .flex.w-max {
-            animation-duration: ${images.length * 3.5}s !important;
-          }
-        }
-
-        /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
-          .flex.w-max {
-            animation: none;
+          div[style*="animation"] {
+            animation: none !important;
           }
         }
       `}</style>

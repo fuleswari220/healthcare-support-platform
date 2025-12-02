@@ -3,24 +3,24 @@ import { MdCreditCard } from "react-icons/md";
 import appointment from "../assets/doctorappointment.webp";
 
 // Add your hospital logo imports here
-import h1 from "../assets/Partners/AnandalokHospitalLogo.png";
-import h2 from "../assets/Partners/BardhamanInstituteofMedicalSciencesLogo.png";
-import h3 from "../assets/Partners/BengalFAITHHospitalLogo.png";
-import h4 from "../assets/Partners/ApoorvaDiagnosticCentreLogo.png";
-import h5 from "../assets/Partners/CAMRIHospitalLogo.png";
-import h6 from "../assets/Partners/Dr.LalPathLabLogo.png";
-import h7 from "../assets/Partners/ECOHospitalandDiagnosticsLogo.png";
-import h8 from "../assets/Partners/GalaxyHospitalLogo.png";
-import h9 from "../assets/Partners/GalaxyMultispecialityHospitalLogo.png";
-import h10 from "../assets/Partners/GouriDevilogo.png";
-import h11 from "../assets/Partners/HCGCancerCentreNewTownLogo.png";
-import h12 from "../assets/Partners/HealthPointBolpurLogo.png";
+import h1 from "../assets/Partners/AnandalokHospitalLogo.webp";
+import h2 from "../assets/Partners/BardhamanInstituteofMedicalSciencesLogo.webp";
+import h3 from "../assets/Partners/BengalFAITHHospitalLogo.webp";
+import h4 from "../assets/Partners/ApoorvaDiagnosticCentreLogo.webp";
+import h5 from "../assets/Partners/CAMRIHospitalLogo.webp";
+import h6 from "../assets/Partners/Dr.LalPathLabLogo.webp";
+import h7 from "../assets/Partners/ECOHospitalandDiagnosticsLogo.webp";
+import h8 from "../assets/Partners/GalaxyHospitalLogo.webp";
+import h9 from "../assets/Partners/GalaxyMultispecialityHospitalLogo.webp";
+import h10 from "../assets/Partners/GouriDevilogo.webp";
+import h11 from "../assets/Partners/HCGCancerCentreNewTownLogo.webp";
+import h12 from "../assets/Partners/HealthPointBolpurLogo.webp";
 import h13 from "../assets/Partners/RajniHospitalLogo.png";
-import h14 from "../assets/Partners/IQCityMedicalCollegeHospitalLogo.png";
-import h15 from "../assets/Partners/JagannathGuptaInstituteofMedicalSciencesLogo.png";
-import h16 from "../assets/Partners/PGRMultispecilityHospitalLogo.png";
-import h17 from "../assets/Partners/KIMSHospitalLogo.png";
-import h18 from "../assets/Partners/ManipalHospitalLOGO.png";
+import h14 from "../assets/Partners/IQCityMedicalCollegeHospitalLogo.webp";
+import h15 from "../assets/Partners/JagannathGuptaInstituteofMedicalSciencesLogo.webp";
+import h16 from "../assets/Partners/PGRMultispecilityHospitalLogo.webp";
+import h17 from "../assets/Partners/KIMSHospitalLogo.webp";
+import h18 from "../assets/Partners/ManipalHospitalLOGO.webp";
 import h19 from "../assets/Partners/RamadeviMedicalCentreLogo.png";
 import h20 from "../assets/Partners/RamkrishnaNursingHomeLogo.png";
 import h21 from "../assets/Partners/SanakaHospitalLogo.png";
@@ -36,8 +36,17 @@ import h29 from "../assets/Partners/RajraniHospitalLogo.png";
 import InfiniteHospitalSlider from "./InfiniteHospitalSlider";
 
 const WhyMLSupport = () => {
-  const logos = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h26, h27, h28, h29];
-  console.log("Logos count:", logos.length, logos);
+  const premiumLogos = [h7, h3, h12, h18, h17, h11, h6, h13, h21, h5, h14, h8, h19, h24, h29];
+  const regularLogos = [h1, h2, h4, h15, h9, h10, h26, h16, h20, h22, h23, h25, h27, h28];
+  const combinedLogos = [];
+  const maxLength = Math.max(premiumLogos.length, regularLogos.length);
+
+  for (let i = 0; i < maxLength; i++) {
+    if (premiumLogos[i]) combinedLogos.push({ src: premiumLogos[i], size: "big" });
+    if (regularLogos[i]) combinedLogos.push({ src: regularLogos[i], size: "small" });
+  }
+
+  const duplicatedLogos = [...combinedLogos, ...combinedLogos];
 
   const benefits = [
     {
@@ -64,12 +73,12 @@ const WhyMLSupport = () => {
 
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
         {/* Heading */}
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+          <h1 className="heading-primary font-bold text-gray-800 leading-tight">
             Healthcare Without Limits - For Every Home
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-green-700 font-semibold max-w-4xl mx-auto">
@@ -85,8 +94,9 @@ const WhyMLSupport = () => {
             <img
               src={appointment}
               alt="Medical Support"
-              className="w-full max-w-md object-cover"
+              className="w-full max-w-md object-cover scale-100 hover:scale-100 transform-none"
             />
+
           </div>
 
           {/* RIGHT: Benefits + Decorative SVG */}
@@ -97,8 +107,9 @@ const WhyMLSupport = () => {
               <img
                 src={appointment}
                 alt="Medical Support"
-                className="w-full object-cover"
+                className="w-full object-cover scale-100 hover:scale-100 transform-none"
               />
+
             </div>
 
             {/* Benefits Cards */}
@@ -144,7 +155,7 @@ const WhyMLSupport = () => {
 
         {/* Trust Section */}
         <div className="text-center mt-20">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h1 className="heading-primary font-extrabold text-gray-900 tracking-tight">
             Trusted by Leading <span className="text-green-600">Healthcare</span> Partners
           </h1>
 
@@ -155,11 +166,11 @@ const WhyMLSupport = () => {
           <div className="mt-2 mx-auto w-24 h-1 bg-emerald-500 rounded-full"></div>
         </div>
 
-        <div className="relative">
-          <InfiniteHospitalSlider images={logos} />
+        <div className="relative mt-12">
+          <InfiniteHospitalSlider logos={duplicatedLogos} />
         </div>
       </div>
-    </section>  
+    </section>
   );
 };
 

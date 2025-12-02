@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
     return (
-        <section className="w-full flex justify-center py-10 px-4 bg-white">
+        <section className="w-full flex justify-center py-10 px-4">
             <div className="relative w-full max-w-4xl bg-[#EAFBF2] rounded-3xl p-6 md:p-10 shadow-sm border border-[#c4f3d9]">
 
                 {/* Top-left curve line */}

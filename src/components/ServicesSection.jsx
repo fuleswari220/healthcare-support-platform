@@ -6,11 +6,12 @@ import { BsClipboard2Data } from "react-icons/bs";
 
 const ServicesSection = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 bg-[#f3fcf7]">
+    //  bg-[#f3fcf7]
+    <section className="py-8 md:py-12 lg:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* HEADER */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+        <h1 className="heading-primary font-bold text-gray-800 mb-4">
           Our Services
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-green-700 font-semibold mb-8 lg:mb-12">

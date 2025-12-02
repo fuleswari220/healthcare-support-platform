@@ -2,9 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Heading  */
+@layer components {
+  /* Global Font */
+  .font-medical {
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* Hero Main Heading */
+  .heading-hero {
+    @apply font-medical text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+           font-extrabold leading-tight text-gray-900;
+  }
+
+  /* Section Heading (e.g., About, Services, How It Works) */
+  .heading-primary {
+    @apply font-medical text-3xl md:text-4xl lg:text-5xl 
+           font-bold text-gray-900 tracking-tight;
+  }
+
+  /* Small Subheading */
+  .heading-secondary {
+    @apply font-medical text-xl md:text-2xl lg:text-3xl 
+           font-semibold text-gray-800;
+  }
+}
+
+
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
+  background-color: bg-white;
 }
 
 .emergency-bar {
@@ -25,9 +52,27 @@ body {
   left: 0;
   right: 0;
   z-index: 50; 
-  background: rgba(17, 24, 39, 0.95); 
+  background: rgba(255, 255, 255, 0.95); 
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+}
+/* hero */
+/* Add to your global CSS */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
 
 /* HEXAGON SHAPE */

@@ -103,12 +103,13 @@ const ServicesPage = () => {
                     name="description"
                     content="Enjoy 24×7 ambulance, lab tests, medicine delivery, and zero-interest medical credit - trusted care, anytime, anywhere"
                 />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             </Helmet>
 
             <Navbar />
 
             {/* Floating Navigation Dots - Desktop Only */}
-            <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:flex flex-col gap-6">
+            <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:flex flex-col gap-6">
                 {[
                     { id: 'services-section', label: 'Services', icon: <Ambulance size={16} /> },
                     { id: 'testimonials-section', label: 'Reviews', icon: <Star size={16} /> },
@@ -118,155 +119,169 @@ const ServicesPage = () => {
                         key={section.id}
                         onClick={() => scrollToSection(section.id)}
                         className="group flex items-center gap-3 transition-all duration-300"
+                        aria-label={`Scroll to ${section.label}`}
                     >
                         <span className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0 bg-black/50 backdrop-blur-lg px-3 py-2 rounded-full border border-white/20">
                             {section.label}
                         </span>
-                        <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-green-600 border-2 border-white/60 group-hover:border-green-300 group-hover:bg-green-500 transition-all duration-300 shadow-lg">
+                        <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-green-600 border-2 border-white/60 group-hover:border-green-300 group-hover:bg-green-500 transition-all duration-300 shadow-lg">
                             {section.icon}
                         </div>
                     </button>
                 ))}
             </div>
 
-            {/* Hero Section with Background Image */}
+            {/* Hero Section - Optimized for all devices */}
             <section
-                className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
+                className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center text-white overflow-hidden"
                 style={{
                     backgroundImage: `linear-gradient(rgba(6, 78, 59, 0.85), rgba(6, 95, 70, 0.9)), url(${HeroBg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed'
+                    backgroundAttachment: 'scroll'
                 }}
             >
-                {/* Animated Background E   lements */}
-                <div className="absolute inset-0">
+                {/* Mobile Touch Overlay for better touch experience */}
+                <div className="absolute inset-0 lg:hidden touch-none pointer-events-none"></div>
+
+                {/* Animated Background Elements - Hidden on mobile for performance */}
+                <div className="absolute inset-0 hidden md:block">
                     <div className="absolute top-20 left-10 w-4 h-4 bg-green-300 rounded-full animate-pulse"></div>
                     <div className="absolute top-40 right-20 w-6 h-6 bg-green-200 rounded-full animate-pulse delay-300"></div>
                     <div className="absolute bottom-32 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-700"></div>
                     <div className="absolute bottom-20 right-32 w-5 h-5 bg-green-300 rounded-full animate-pulse delay-500"></div>
                 </div>
 
-                <div className="relative max-w-7xl mx-auto px-6 text-center">
+                <div className="relative max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-center py-12 md:py-16 lg:py-0">
                     {/* Trust Badge */}
-                    <div className="mt-8 inline-flex items-center gap-3 bg-white/20 backdrop-blur-lg rounded-full px-6 py-3 text-sm font-semibold border border-white/30">
-                        <Shield className="w-5 h-5" />
-                        Trusted by 65,000+ Families in Kolkata
+                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-lg rounded-full px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-semibold border border-white/30 mb-6 md:mb-8 lg:mb-12">
+                        <Shield className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
+                        <span className="text-xs md:text-sm">Trusted by 65,000+ Families in Kolkata</span>
                     </div>
 
-
                     {/* Main Heading */}
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Healthcare That<br />
-                        <span className="text-green-300 bg-gradient-to-r from-green-300 to-emerald-400 bg-clip-text text-transparent">
-                            Never Sleeps
-                        </span>
-                    </h1>
+                    <div className="mb-6 md:mb-8 lg:mb-12 px-2">
+                        <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-snug sm:leading-tight">
+                            Healthcare That
+                            <br className="hidden xs:block" />
+                            <span className="text-green-300 bg-gradient-to-r from-green-300 to-emerald-400 bg-clip-text text-transparent block mt-1 sm:mt-2 lg:mt-4">
+                                Never Sleeps
+                            </span>
+                        </h1>
+                    </div>
 
-                    <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    {/* Subtitle */}
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-100 max-w-3xl lg:max-w-4xl mx-auto mb-8 md:mb-10 lg:mb-14 px-2 sm:px-4 leading-relaxed">
                         One affordable plan. Zero worries. Scroll to discover our complete healthcare services.
                     </p>
 
-                    {/* Stats with Enhanced Design */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
+                    {/* Stats Grid - Responsive */}
+                    <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto mb-8 md:mb-10 lg:mb-16 px-2">
                         {stats.map((stat, i) => (
                             <div
                                 key={i}
-                                className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                                className="bg-white/15 backdrop-blur-lg rounded-lg md:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 active:scale-95 lg:hover:scale-105"
                             >
-                                <div className="text-green-300 mb-3 flex justify-center">{stat.icon}</div>
-                                <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>
-                                <p className="text-green-200 text-sm font-medium">{stat.label}</p>
+                                <div className="text-green-300 mb-1 sm:mb-2 lg:mb-3 flex justify-center">
+                                    {React.cloneElement(stat.icon, { className: "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" })}
+                                </div>
+                                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1">{stat.value}</p>
+                                <p className="text-green-200 text-xs sm:text-sm font-medium leading-tight">{stat.label}</p>
                             </div>
                         ))}
                     </div>
 
-
+                    {/* Discover All Services Button */}
+                    <div>
+                        <button
+                            onClick={scrollToNext}
+                            className="group inline-flex items-center gap-2 text-green-300 hover:text-green-200 text-sm sm:text-base md:text-lg font-semibold transition-colors active:scale-95"
+                        >
+                            <span>Discover All Services</span>
+                            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform" />
+                        </button>
+                    </div>
                 </div>
 
-                {/* Enhanced Scroll Indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                {/* Scroll Indicator for Mobile */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 lg:hidden">
                     <button
                         onClick={scrollToNext}
-                        className="group flex flex-col items-center text-white hover:text-green-300 transition-all duration-300"
+                        className="group flex flex-col items-center text-white hover:text-green-300 transition-all duration-300 active:scale-95"
+                        aria-label="Scroll to services"
                     >
-                        <span className="text-sm mb-3 opacity-90 font-medium tracking-wide animate-pulse">
-                            Discover All Services
-                        </span>
                         <div className="relative">
-                            <div className="w-10 h-16 border-2 border-white/60 rounded-full flex justify-center group-hover:border-green-300 transition-colors">
+                            <div className="w-8 h-12 border-2 border-white/60 rounded-full flex justify-center group-hover:border-green-300 transition-colors">
                                 <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-bounce group-hover:bg-green-300"></div>
                             </div>
-                            <ChevronDown className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 text-white opacity-70 group-hover:text-green-300" />
                         </div>
                         <span className="text-xs mt-2 opacity-70 group-hover:opacity-100">Scroll to explore</span>
                     </button>
                 </div>
             </section>
 
-            {/* Services Grid with Pattern Background */}
+            {/* Services Grid Section */}
             <section
-                className="relative py-24 bg-gray-50 overflow-hidden"
+                className="relative py-12 md:py-16 lg:py-20 bg-gray-50 overflow-hidden"
                 id="services-section"
             >
-                {/* Background Overlay */}
                 <div className="absolute inset-0 bg-white/95"></div>
 
-                <div className="relative max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-20">
-                        <div className="inline-flex items-center gap-2 text-green-600 bg-green-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                            <Star className="w-4 h-4" />
-                            COMPREHENSIVE CARE
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-8 md:mb-12 lg:mb-16">
+                        <div className="inline-flex items-center gap-2 text-green-600 bg-green-100 rounded-full px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-semibold mb-3 md:mb-4">
+                            <Star className="w-3 h-3 md:w-4 md:h-4" />
+                            <span>COMPREHENSIVE CARE</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-2">
                             Everything Your Family Needs
                         </h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
                             7 powerful services under one membership — designed for complete peace of mind.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className={`relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden ${service.highlight ? 'ring-2 ring-green-500 ring-offset-4' : ''
-                                    } hover:transform hover:-translate-y-2`}
+                                className={`relative bg-white rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group overflow-hidden ${service.highlight ? 'ring-2 ring-green-500 ring-offset-1 sm:ring-offset-2' : ''
+                                    } active:scale-95 lg:hover:transform lg:hover:-translate-y-1`}
                             >
                                 {service.highlight && (
-                                    <div className="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-green-500 text-white text-xs font-bold px-2 py-1 sm:px-3 sm:py-1 rounded-full">
                                         MOST POPULAR
                                     </div>
                                 )}
 
-                                <div className="p-8 lg:p-10">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-6 text-green-600 group-hover:from-green-500 group-hover:to-emerald-500 group-hover:text-white transition-all duration-300">
+                                <div className="p-4 sm:p-6 lg:p-8">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 text-green-600 group-hover:from-green-500 group-hover:to-emerald-500 group-hover:text-white transition-all duration-300">
                                         {service.icon}
                                     </div>
 
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-700 transition-colors">
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-green-700 transition-colors">
                                         {service.title}
                                     </h3>
-                                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                                    <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
 
-                                    <div className="space-y-3 mb-8">
+                                    <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                                         {service.features.map((feat, i) => (
-                                            <div key={i} className="flex items-center gap-3">
-                                                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 transition-colors">
-                                                    <Check className="w-3 h-3 text-green-600 group-hover:text-white transition-colors" />
+                                            <div key={i} className="flex items-center gap-2 sm:gap-3">
+                                                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 transition-colors">
+                                                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-green-600 group-hover:text-white transition-colors" />
                                                 </div>
-                                                <span className="text-gray-700 font-medium">{feat}</span>
+                                                <span className="text-xs sm:text-sm md:text-base text-gray-700 font-medium">{feat}</span>
                                             </div>
                                         ))}
                                     </div>
 
-                                    <div className="pt-6 border-t border-gray-100">
+                                    <div className="pt-4 sm:pt-6 border-t border-gray-100">
                                         <a
                                             href="https://mlsupport.org/ML_support/Customer/login.php"
-                                            className="text-green-600 font-bold hover:text-green-700 flex items-center gap-2 group/link"
+                                            className="text-green-600 font-bold hover:text-green-700 flex items-center gap-2 group/link text-sm sm:text-base"
                                         >
                                             Get This Service
-                                            <ArrowRight className="w-5 h-5 group-hover/link:translate-x-2 transition-transform" />
+                                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/link:translate-x-1 transition-transform" />
                                         </a>
                                     </div>
                                 </div>
@@ -275,146 +290,143 @@ const ServicesPage = () => {
                     </div>
 
                     {/* Next Section Indicator */}
-                    <div className="text-center mt-16">
+                    <div className="text-center mt-8 md:mt-12 lg:mt-16">
                         <button
                             onClick={() => scrollToSection('testimonials-section')}
-                            className="group inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold transition-colors"
+                            className="group inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold transition-colors text-sm sm:text-base active:scale-95"
                         >
                             <span>Hear from our families</span>
-                            <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-0.5 transition-transform" />
                         </button>
                     </div>
                 </div>
             </section>
 
             {/* Testimonials Section */}
-            <section className="py-20 bg-white" id="testimonials-section">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 text-green-600 bg-green-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                            <Star className="w-4 h-4" />
-                            HAPPY FAMILIES
+            <section className="py-12 md:py-16 lg:py-20 bg-white" id="testimonials-section">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-8 md:mb-12 lg:mb-16">
+                        <div className="inline-flex items-center gap-2 text-green-600 bg-green-100 rounded-full px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-semibold mb-3 md:mb-4">
+                            <Star className="w-3 h-3 md:w-4 md:h-4" />
+                            <span>HAPPY FAMILIES</span>
                         </div>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">What Families Say</h2>
-                        <p className="text-xl text-gray-600">Real stories from our ML Support family</p>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-2">What Families Say</h2>
+                        <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2 sm:px-4">Real stories from our ML Support family</p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-4 lg:px-0">
                         {testimonials.map((testimonial, index) => (
-                            <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                                <div className="flex mb-4">
+                            <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-green-100 hover:shadow-lg transition-all duration-300 active:scale-95 lg:hover:transform lg:hover:-translate-y-1">
+                                <div className="flex mb-3 sm:mb-4">
                                     {[...Array(testimonial.rating)].map((_, i) => (
-                                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                                        <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
                                     ))}
                                 </div>
-                                <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
+                                <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 italic">"{testimonial.text}"</p>
                                 <div>
-                                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                                    <p className="text-green-600 text-sm">{testimonial.location}</p>
+                                    <p className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</p>
+                                    <p className="text-green-600 text-xs sm:text-sm">{testimonial.location}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     {/* Next Section Indicator */}
-                    <div className="text-center mt-16">
+                    <div className="text-center mt-8 md:mt-12 lg:mt-16">
                         <button
                             onClick={() => scrollToSection('cta-section')}
-                            className="group inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold transition-colors"
+                            className="group inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold transition-colors text-sm sm:text-base active:scale-95"
                         >
                             <span>Ready to get started?</span>
-                            <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-0.5 transition-transform" />
                         </button>
                     </div>
                 </div>
             </section>
 
-            {/* Final CTA with Background Image */}
+            {/* Final CTA Section */}
             <section
-                className="relative py-24 text-white overflow-hidden"
+                className="relative py-12 md:py-16 lg:py-20 text-white overflow-hidden"
                 id="cta-section"
                 style={{
                     backgroundImage: `linear-gradient(rgba(6, 78, 59, 0.9), rgba(6, 95, 70, 0.95)), url(${CTABg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed'
+                    backgroundAttachment: 'scroll'
                 }}
             >
-                {/* Floating Elements */}
-                <div className="absolute inset-0">
+                {/* Floating Elements - Hidden on mobile for performance */}
+                <div className="absolute inset-0 hidden md:block">
                     <div className="absolute top-1/4 left-10 w-8 h-8 bg-green-400 rounded-full opacity-20 animate-float"></div>
                     <div className="absolute top-1/2 right-20 w-12 h-12 bg-green-300 rounded-full opacity-30 animate-float delay-1000"></div>
                     <div className="absolute bottom-1/3 left-1/4 w-6 h-6 bg-green-500 rounded-full opacity-25 animate-float delay-500"></div>
                 </div>
 
-                <div className="relative max-w-6xl mx-auto px-6 text-center">
-                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-lg rounded-full px-4 py-2 text-sm font-semibold mb-6 border border-white/30">
-                        <Shield className="w-4 h-4" />
-                        START YOUR JOURNEY
+                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-lg rounded-full px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-semibold mb-4 md:mb-6 border border-white/30">
+                        <Shield className="w-3 h-3 md:w-4 md:h-4" />
+                        <span>START YOUR JOURNEY</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        One Membership.<br />
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 px-2 leading-snug">
+                        One Membership.
+                        <br />
                         <span className="text-green-300">Lifetime Peace of Mind.</span>
                     </h2>
-                    <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 lg:mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed px-2 sm:px-4">
                         Join 65,000+ families in Kolkata who never worry about medical emergencies again.
                     </p>
 
                     {/* Features Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto mb-6 md:mb-8 lg:mb-12 px-2">
                         {["Free Ambulance", "Home Diagnostics", "Medicine Delivery", "24×7 Doctor Access"].map((item, i) => (
                             <div key={i} className="text-center group">
-                                <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
-                                    {i === 0 && <Ambulance className="w-8 h-8" />}
-                                    {i === 1 && <TestTube className="w-8 h-8" />}
-                                    {i === 2 && <Pill className="w-8 h-8" />}
-                                    {i === 3 && <Phone className="w-8 h-8" />}
+                                <div className="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-4 group-hover:bg-white/30 transition-all duration-300 active:scale-95 lg:group-hover:scale-110">
+                                    {i === 0 && <Ambulance className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />}
+                                    {i === 1 && <TestTube className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />}
+                                    {i === 2 && <Pill className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />}
+                                    {i === 3 && <Phone className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />}
                                 </div>
-                                <p className="font-semibold text-lg group-hover:text-green-300 transition-colors">{item}</p>
+                                <p className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg group-hover:text-green-300 transition-colors">{item}</p>
                             </div>
                         ))}
                     </div>
 
-                    {/* Final CTA Button */}
-
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-10">
+                    {/* Final CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center mt-6 md:mt-10 px-2">
                         <a
                             href="/become-member"
-                            className="group inline-flex items-center gap-4 bg-green-400 text-green-900 font-bold text-xl px-14 py-6 rounded-full hover:bg-green-300 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
+                            className="group inline-flex items-center gap-2 sm:gap-4 bg-green-400 text-green-900 font-bold text-sm sm:text-base md:text-lg lg:text-xl px-6 sm:px-8 md:px-12 lg:px-14 py-3 sm:py-4 md:py-6 rounded-full hover:bg-green-300 transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-95 lg:hover:transform lg:hover:-translate-y-1 w-full sm:w-auto justify-center"
                         >
-                            <Shield className="w-7 h-7" />
-                            Start Protecting Your Family Today
-                            <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
+                            <Shield className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+                            <span>Start Protecting Your Family Today</span>
+                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform" />
                         </a>
 
                         <a
                             href="tel:+916262666631"
-                            className="group inline-flex items-center gap-3 bg-white text-green-800 font-bold text-lg px-10 py-6 rounded-full border-4 border-green-400 hover:bg-green-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
+                            className="group inline-flex items-center gap-2 sm:gap-3 bg-white text-green-800 font-bold text-sm sm:text-base md:text-lg px-5 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 md:py-6 rounded-full border-2 sm:border-4 border-green-400 hover:bg-green-50 transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-95 lg:hover:transform lg:hover:-translate-y-1 w-full sm:w-auto justify-center"
                         >
-                            <Phone className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
-                            <span>Call 24×7 Helpline</span>
-                            <span className="text-sm font-normal opacity-90 block sm:inline">+91 626-266-6631</span>
+                            <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-green-600 group-hover:animate-pulse" />
+                            <div className="flex flex-col items-start">
+                                <span className="text-sm sm:text-base">Call 24×7 Helpline</span>
+                                <span className="text-xs sm:text-sm font-normal opacity-90">+91 626-266-6631</span>
+                            </div>
                         </a>
                     </div>
 
                     {/* Trust Note */}
-                    <p className="mt-8 text-green-200 text-sm">
-                        No hidden charges • 24×7 support • 300+ hospital network
-                    </p>
-
-                    {/* Trust Note */}
-                    <p className="mt-8 text-green-200 text-sm">
+                    <p className="mt-6 md:mt-8 text-green-200 text-xs sm:text-sm md:text-base px-2">
                         ✅ No hidden charges • ✅ 24×7 support • ✅ 300+ hospital network
                     </p>
 
                     {/* Back to Top */}
-                    <div className="text-center mt-12">
+                    <div className="text-center mt-8 md:mt-12">
                         <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="group inline-flex items-center gap-2 text-green-200 hover:text-green-300 transition-colors"
+                            className="group inline-flex items-center gap-2 text-green-200 hover:text-green-300 transition-colors text-sm sm:text-base active:scale-95"
                         >
-                            <ChevronDown className="w-5 h-5 rotate-180 group-hover:-translate-y-1 transition-transform" />
+                            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 rotate-180 group-hover:-translate-y-0.5 transition-transform" />
                             <span>Back to top</span>
                         </button>
                     </div>

@@ -83,19 +83,6 @@ const Contact = () => {
                   />
                 </div>
 
-                {/* <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700">Service Needed</label>
-                  <select className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white">
-                    <option>Select a service</option>
-                    <option>Emergency Ambulance</option>
-                    <option>Healthcare Membership</option>
-                    <option>Medical Credit</option>
-                    <option>Home Diagnostics</option>
-                    <option>Medicine Delivery</option>
-                    <option>Other</option>
-                  </select>
-                </div> */}
-
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-gray-700">Message *</label>
                   <textarea
@@ -231,34 +218,6 @@ const Contact = () => {
                 </div>
               </div>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-green-700 text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <Users className="w-12 h-12 mx-auto mb-4 opacity-90" />
-              <p className="text-4xl font-bold">64.6K+</p>
-              <p className="mt-2 text-lg">Families Trust Us</p>
-            </div>
-            <div>
-              <Ambulance className="w-12 h-12 mx-auto mb-4 opacity-90" />
-              <p className="text-4xl font-bold">24×7</p>
-              <p className="mt-2 text-lg">Emergency Ready</p>
-            </div>
-            <div>
-              <Shield className="w-12 h-12 mx-auto mb-4 opacity-90" />
-              <p className="text-4xl font-bold">300+</p>
-              <p className="mt-2 text-lg">Partner Hospitals</p>
-            </div>
-            <div>
-              <Clock className="w-12 h-12 mx-auto mb-4 opacity-90" />
-              <p className="text-4xl font-bold">5 min</p>
-              <p className="mt-2 text-lg">Avg Response Time</p>
-            </div>
           </div>
         </div>
       </section>

@@ -1,83 +1,163 @@
-import { FaUserPlus, FaHeadset, FaStethoscope, FaHandHoldingHeart, FaCheck, FaClock } from 'react-icons/fa';
+import { FaUserPlus, FaHeadset, FaStethoscope, FaHandHoldingHeart, FaArrowRight } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const colors = {
+  primary: "#00A651",
+  lightGreen: "#E8F5E9",
+  darkGreen: "#006400",
+  white: "#FFFFFF",
+};
 
 const HowItWorks = () => {
-const steps = [
-  {
-    title: "Sign Up Easily",
-    desc: "Join within minutes through our online portal or call our 24×7 healthcare helpline in Kolkata for quick setup.",
-    icon: FaUserPlus,
-  },
-  {
-    title: "Request Help Anytime",
-    desc: "In an emergency, dial our number for ambulance service in Kolkata or request any medical support instantly via our member app.",
-    icon: FaHeadset,
-  },
-  {
-    title: "Complete Health Coordination",
-    desc: "From ambulance to online free doctor consultation in Kolkata, diagnostics, treatment planning, and post-care — we coordinate everything for you.",
-    icon: FaStethoscope,
-  },
-  {
-    title: "You Rest, We Handle the Rest",
-    desc: "Enjoy stress-free healthcare as we manage medical assistance services, billing, follow-ups, and every step of your care journey.",
-    icon: FaHandHoldingHeart,
-  },
-];
+  const steps = [
+    {
+      title: "Sign Up in Minutes",
+      desc: "Instant enrollment via app or a quick call to our 24×7 Kolkata helpline.",
+      icon: FaUserPlus,
+    },
+    {
+      title: "One Tap for Help",
+      desc: "Emergency ambulance, doctor on call, or any support — instantly via app or phone.",
+      icon: FaHeadset,
+    },
+    {
+      title: "End-to-End Care Coordination",
+      desc: "We manage ambulance, consultations, diagnostics, hospital admission & follow-ups.",
+      icon: FaStethoscope,
+    },
+    {
+      title: "You Heal, We Handle",
+      desc: "Zero stress. We take care of bills, updates, medicines, and recovery support.",
+      icon: FaHandHoldingHeart,
+    },
+  ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 60, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   return (
-    <section className="py-28 bg-gray-50 " >
-      <div className="max-w-7xl mx-auto px-6 bg-[#f3fcf7]">
+    <section
+      className="py-20 lg:py-22 overflow-hidden"
+    // style={{
+    //   background: `linear-gradient(to bottom, ${colors.white}, ${colors.lightGreen}, ${colors.white})`,
+    // }}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h1
+            className="heading-primary font-extrabold tracking-tight"
+            style={{
+              backgroundImage: `linear-gradient(to right, ${colors.primary}, ${colors.darkGreen})`,
+              WebkitTextFillColor: "transparent",
+              WebkitBackgroundClip: "text",
+            }}
+          >
             How It Works
-          </h2>
-          <p className="mt-6 text-l md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+          </h1>
+
+          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
             A seamless, transparent journey from enrollment to lifetime healthcare coverage
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
 
-          {/* Elegant Connecting Line */}
-          <div className="hidden lg:block absolute top-32 left-20 right-20 h-px bg-gradient-to-r from-transparent via-green-300 to-transparent"></div>
+        {/* Steps */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative"
+        >
+
+          {/* Connecting Line */}
+          <svg
+            className="hidden lg:block absolute top-24 left-0 w-full h-32 pointer-events-none"
+            viewBox="0 0 1200 120"
+            fill="none"
+          >
+            <path
+              d="M150 60 Q450 20, 750 60 T1150 60"
+              stroke="url(#gradientPath)"
+              strokeWidth="2"
+              opacity="0.4"
+            />
+            <defs>
+              <linearGradient id="gradientPath" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor={colors.primary} />
+                <stop offset="50%" stopColor={colors.darkGreen} />
+                <stop offset="100%" stopColor={colors.primary} />
+              </linearGradient>
+            </defs>
+          </svg>
 
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="bg-white rounded-2xl p-10 text-center transition-all duration-500 hover:shadow-2xl border border-gray-100 hover:border-green-600 group h-full flex flex-col">
+            <motion.div key={index} variants={itemVariants} className="relative group">
+              <div
+                className="relative rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border h-full flex flex-col justify-between backdrop-blur-sm"
+                style={{
+                  background: colors.white,
+                  borderColor: colors.lightGreen,
+                }}
+              >
 
-                {/* Step Number - Premium Style */}
-                <div className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-green-600 to-emerald-700 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-2xl ring-4 ring-white">
-                  0{index + 1}
+                {/* Step Number */}
+                <div
+                  className="absolute -top-6 left-8 w-14 h-14 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-xl ring-8 ring-white z-10"
+                  style={{
+                    background: `linear-gradient(to bottom right, ${colors.primary}, ${colors.darkGreen})`,
+                  }}
+                >
+                  {index + 1}
                 </div>
 
-                {/* Icon with Subtle Ring */}
-                <div className="w-28 h-28 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-green-500 to-emerald-600 p-7 text-white shadow-xl ring-8 ring-green-100 group-hover:ring-green-200 transition-all">
-                  <step.icon className="w-full h-full" />
+                {/* Icon */}
+                <div className="mb-8 mt-6">
+                  <div
+                    className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
+                    style={{
+                      background: colors.lightGreen,
+                    }}
+                  >
+                    <step.icon className="w-10 h-10" style={{ color: colors.primary }} />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-5 tracking-tight">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed flex-grow text-base">
-                  {step.desc}
-                </p>
-
-                {/* Minimal Badge */}
-                <div className="mt-8 inline-flex items-center gap-2 text-green-700 font-medium">
-                  <FaCheck className="text-lg" />
-                  <span className="text-sm uppercase tracking-wider">Step {index + 1}</span>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{step.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-base">{step.desc}</p>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* CTA Button */}
+                {/* Arrow */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-8 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <FaArrowRight className="text-3xl" style={{ color: colors.primary }} />
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          ))}
+
+        </motion.div>
+
+        {/* CTA */}
         <div className="mt-20 text-center">
           <button
             onClick={() => {

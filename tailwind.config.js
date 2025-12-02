@@ -10,7 +10,7 @@ export default {
         white: "#FFFFFF",
       },
 
-      // ⭐ Added animation + keyframes for navbar mobile dropdown
+      
       keyframes: {
         slideDown: {
           "0%": { opacity: "0", transform: "translateY(-10px)" },

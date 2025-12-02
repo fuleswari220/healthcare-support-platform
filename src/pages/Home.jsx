@@ -27,8 +27,8 @@ const Home = () => {
 
       <Navbar />
       <Hero />
-      <WhyMLSupport />
       <AboutSection />
+      <WhyMLSupport />
       <ServicesSection />
       <MembershipSection />
       <MembershipBenefits />

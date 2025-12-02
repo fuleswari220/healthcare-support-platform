@@ -1,10 +1,12 @@
 // src/App.jsx
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import HomeSkeleton from "./components/HomeSkeleton";
+import QRPopup from "./components/QRPopup"; // popup import
+import SeoLandingPage from "./components/SeoLandingPage";
 
-// Lazy load all pages
+// Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -16,19 +18,18 @@ const Membership = lazy(() => import("./pages/Membership"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Blog = lazy(() => import("./pages/Blog"));
 
-// Optional: Loading Spinner Component 
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-emerald-50">
-    <div className="text-center">
-      <div className="w-16 h-16 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-emerald-700 font-medium">Loading...</p>
-    </div>
-  </div>
-);
-
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Every reload → show popup
+    setShowPopup(true);
+  }, []);
+
   return (
     <Router>
+      {/* {showPopup && <QRPopup onClose={() => setShowPopup(false)} />} */}
+
       <ScrollToTop />
       <Suspense fallback={<HomeSkeleton />}>
         <Routes>
@@ -42,19 +43,26 @@ function App() {
           <Route path="/membership" element={<Membership />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/ml-healthcare-support" element={<SeoLandingPage />} />
 
-          {/* Optional: 404 Page */}
-          <Route path="*" element={
-            <div className="min-h-screen flex items-center justify-center bg-gray-100">
-              <div className="text-center">
-                <h1 className="text-6xl font-bold text-emerald-600 mb-4">404</h1>
-                <p className="text-xl text-gray-700">Page Not Found</p>
-                <a href="/" className="mt-6 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition">
-                  Go Home
-                </a>
+          {/* 404 */}
+          <Route
+            path="*"
+            element={
+              <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <div className="text-center">
+                  <h1 className="text-6xl font-bold text-emerald-600 mb-4">404</h1>
+                  <p className="text-xl text-gray-700">Page Not Found</p>
+                  <a
+                    href="/"
+                    className="mt-6 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition"
+                  >
+                    Go Home
+                  </a>
+                </div>
               </div>
-            </div>
-          } />
+            }
+          />
         </Routes>
       </Suspense>
     </Router>

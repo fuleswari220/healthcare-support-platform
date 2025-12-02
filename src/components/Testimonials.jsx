@@ -195,14 +195,14 @@ const Testimonials = () => {
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 rounded-full px-4 py-2 text-sm font-semibold mb-6">
+          {/* <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 rounded-full px-4 py-2 text-sm font-semibold mb-6">
             <Heart className="w-4 h-4" fill="currentColor" />
             Trusted by 65,000+ Families
-          </div>
+          </div> */}
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="heading-primary font-bold text-gray-900 mb-4">
             Real Stories from Our Healthcare Family
-          </h2>
+          </h1>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
             Discover how ML Support is transforming healthcare experiences across India

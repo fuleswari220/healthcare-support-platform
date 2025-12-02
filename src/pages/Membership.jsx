@@ -139,7 +139,7 @@ const Membership = () => {
                     { icon: Heart, text: "Free follow-up doctor visits (7 days)" },
                     { icon: Droplets, text: "Diabetic tests 2x/month @ ₹100 only" },
                     { icon: Stethoscope, text: "Free BP & Sugar Monitoring" },
-                    { icon: Shield, text: "Full mediclaim & insurance support" }
+                    { icon: Shield, text: "Full Insurance support" }
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
                       <item.icon className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
@@ -254,12 +254,6 @@ const Membership = () => {
                 className="px-4 md:px-6 py-3 md:py-4 lg:py-5 rounded-lg md:rounded-xl border-2 border-gray-300 focus:border-green-500 focus:ring-2 md:focus:ring-4 focus:ring-green-100 transition text-base md:text-lg"
               />
             </div>
-
-            {/* <select className="w-full px-4 md:px-6 py-3 md:py-4 lg:py-5 rounded-lg md:rounded-xl border-2 border-gray-300 focus:border-green-500 focus:ring-2 md:focus:ring-4 focus:ring-green-100 transition text-base md:text-lg mb-6">
-              <option>Select Plan</option>
-              <option>Basic Membership (FREE)</option>
-              <option selected>Gold Membership ₹599/year ← Best Value</option>
-            </select> */}
 
             {/* Join Now Button */}
             <a
