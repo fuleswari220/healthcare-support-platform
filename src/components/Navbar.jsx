@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiMenuAlt3, HiChevronDown, HiDownload, HiStar } from "react-icons/hi";
+import { HiMenuAlt3, HiDownload, HiStar } from "react-icons/hi";
 import { GiCrossMark } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import logo from "../assets/LOGO1.webp";
@@ -32,17 +32,17 @@ const Navbar = () => {
           <div className="flex items-center justify-between py-4">
 
             {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0 z-10">
               <img src={logo} alt="Logo" className="h-14 sm:h-18 w-auto object-contain" />
             </Link>
 
-            {/* Desktop Menu - এখন md (768px) থেকে শুরু */}
-            <div className="hidden md:flex items-center space-x-1">
+            {/* Desktop Menu - 768px থেকে শুরু + Horizontal Scroll যদি জায়গা না থাকে */}
+            <div className="hidden md:flex items-center space-x-1 flex-1 justify-center overflow-x-auto whitespace-nowrap scrollbar-hide px-4">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`relative px-5 py-3 text-base font-medium transition-all duration-300 rounded-lg ${
+                  className={`relative px-5 py-3 text-base font-medium transition-all duration-300 rounded-lg flex-shrink-0 ${
                     item.featured
                       ? "bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 mx-2"
                       : "text-gray-800 hover:text-green-700 hover:bg-green-50"
@@ -55,13 +55,13 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Desktop Buttons - md থেকে দেখাবে */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Desktop Buttons - সবসময় দৃশ্যমান থাকবে */}
+            <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
               <a
                 href="https://mlsupport.org/ML_support/Customer/login.php"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-7 py-3 bg-white text-green-700 font-bold border-2 border-green-300 rounded-xl hover:bg-green-50 hover:border-green-500 transition-all duration-300 shadow-md"
+                className="px-6 py-3 bg-white text-green-700 font-bold border-2 border-green-300 rounded-xl hover:bg-green-50 hover:border-green-500 transition-all duration-300 shadow-md whitespace-nowrap"
               >
                 Login
               </a>
@@ -69,17 +69,17 @@ const Navbar = () => {
                 href={playStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-7 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
               >
                 <HiDownload className="text-xl" />
                 Download App
               </a>
             </div>
 
-            {/* Mobile Hamburger Button - শুধু md এর নিচে দেখাবে */}
+            {/* Mobile Hamburger Button */}
             <button
               onClick={() => setOpen(!open)}
-              className="md:hidden text-gray-700 text-3xl p-2 bg-green-50 rounded-lg border border-green-200"
+              className="md:hidden text-gray-700 text-3xl p-2 bg-green-50 rounded-lg border border-green-200 z-10"
             >
               {open ? <GiCrossMark /> : <HiMenuAlt3 />}
             </button>
@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - শুধু মোবাইলে */}
+      {/* Mobile Menu Overlay */}
       {open && (
         <div
           className="md:hidden fixed inset-0 bg-black bg-opacity-60 z-40"
@@ -95,7 +95,7 @@ const Navbar = () => {
         />
       )}
 
-      {/* Mobile Sliding Menu - শুধু মোবাইলে */}
+      {/* Mobile Sliding Menu */}
       <div
         className={`md:hidden fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-500 ease-in-out ${
           open ? "translate-x-0" : "-translate-x-full"
@@ -152,6 +152,17 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Hide Scrollbar when horizontal scroll (optional but beautiful) */}
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </>
   );
 };
